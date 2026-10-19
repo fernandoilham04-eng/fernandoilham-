@@ -1,0 +1,2206 @@
+<!DOCTYPE html>
+<html lang="en" class="scroll-smooth">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Fernando Ilham Pate Gheta | Finance &amp; E-Commerce Portfolio</title>
+  <meta name="description" content="Portfolio of Fernando Ilham Pate Gheta - Management Graduate (Finance Concentration) &amp; E-Commerce Operations Specialist. Financial Governance, SPIP/PIPK Compliance, and Marketplace Optimization.">
+  <meta name="author" content="Fernando Ilham Pate Gheta">
+
+  <!-- Google Fonts: Plus Jakarta Sans & Outfit -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@400;500;600;700;800&family=Plus+Jakarta+Sans:ital,wght@0,300;0,400;0,500;0,600;0,700;0,800;1,400&display=swap" rel="stylesheet">
+
+  <!-- Tailwind CSS CDN -->
+  <script src="https://cdn.tailwindcss.com"></script>
+  <script>
+    tailwind.config = {
+      darkMode: 'class',
+      theme: {
+        extend: {
+          fontFamily: {
+            sans: ['"Plus Jakarta Sans"', 'system-ui', '-apple-system', 'sans-serif'],
+            display: ['"Outfit"', '"Plus Jakarta Sans"', 'sans-serif'],
+          },
+          colors: {
+            // Calm, soft, modern palette: muted sage green, warm slate, warm sand/cream
+            sage: {
+              50: '#F4F7F5',
+              100: '#E8F0EC', // soft sage green from prompt
+              200: '#D3E2D8',
+              300: '#ADC6B7',
+              400: '#7FA790',
+              500: '#56846D',
+              600: '#436B57',
+              700: '#355546',
+              800: '#2A4337',
+              900: '#22362D',
+              950: '#14211B',
+            },
+            slateGreen: {
+              50: '#F5F7F6',
+              100: '#E6EBE8',
+              200: '#CCD8D1',
+              300: '#AABEB3',
+              400: '#7E9C8F',
+              500: '#5A7A6C',
+              600: '#435F53',
+              700: '#344A41',
+              800: '#2C3E35', // warm slate from prompt
+              900: '#1F2D27',
+              950: '#141E1A',
+            },
+            sand: {
+              50: '#FFFFFF',
+              100: '#FDFBF7', // warm sand from prompt
+              200: '#F7F4EB',
+              300: '#EDE7DC',
+              400: '#DED5C5',
+              500: '#C9BDA6',
+            },
+            charcoal: {
+              700: '#2D3748',
+              800: '#242D38',
+              900: '#1A202C', // soft charcoal from prompt
+              950: '#11161E',
+            },
+            terracotta: {
+              50: '#FCF7F5',
+              100: '#F9ECE6',
+              200: '#F3D7CC',
+              300: '#E9BAA8',
+              400: '#DC967E',
+              500: '#CA7558',
+              600: '#B55A3D',
+            }
+          },
+          boxShadow: {
+            'glow-sage': '0 0 30px -5px rgba(86, 132, 109, 0.28)',
+            'glow-terracotta': '0 0 25px -5px rgba(202, 117, 88, 0.25)',
+            'card-calm': '0 12px 35px -10px rgba(44, 62, 53, 0.07), 0 4px 10px -2px rgba(44, 62, 53, 0.03)',
+            'card-calm-dark': '0 14px 40px -12px rgba(0, 0, 0, 0.55), 0 4px 12px -2px rgba(0, 0, 0, 0.35)',
+          }
+        }
+      }
+    }
+  </script>
+
+  <style>
+    /* Custom Scrollbar */
+    ::-webkit-scrollbar {
+      width: 9px;
+    }
+    ::-webkit-scrollbar-track {
+      background: #F4F7F5;
+    }
+    html.dark ::-webkit-scrollbar-track {
+      background: #141E1A;
+    }
+    ::-webkit-scrollbar-thumb {
+      background: #ADC6B7;
+      border-radius: 6px;
+    }
+    html.dark ::-webkit-scrollbar-thumb {
+      background: #344A41;
+      border-radius: 6px;
+    }
+    ::-webkit-scrollbar-thumb:hover {
+      background: #7FA790;
+    }
+
+    /* Floating Keyframe Animation */
+    @keyframes float {
+      0%, 100% {
+        transform: translateY(0px) rotate(0deg);
+      }
+      50% {
+        transform: translateY(-9px) rotate(0.4deg);
+      }
+    }
+    .animate-float {
+      animation: float 5.5s ease-in-out infinite;
+    }
+
+    /* Subtle Bounce Keyframe Animation */
+    @keyframes bounce-subtle {
+      0%, 100% {
+        transform: translateY(0);
+      }
+      50% {
+        transform: translateY(-4px);
+      }
+    }
+    .animate-bounce-subtle {
+      animation: bounce-subtle 3.2s ease-in-out infinite;
+    }
+
+    /* Soft Glow Pulse */
+    @keyframes pulse-glow {
+      0%, 100% {
+        opacity: 0.45;
+        transform: scale(1);
+      }
+      50% {
+        opacity: 0.8;
+        transform: scale(1.05);
+      }
+    }
+    .animate-pulse-glow {
+      animation: pulse-glow 6s ease-in-out infinite;
+    }
+
+    /* Smooth Scroll Entrance Utility */
+    .reveal-on-scroll {
+      opacity: 0;
+      transform: translateY(22px) scale(0.985);
+      transition: opacity 0.7s cubic-bezier(0.16, 1, 0.3, 1), transform 0.7s cubic-bezier(0.16, 1, 0.3, 1);
+      will-change: opacity, transform;
+    }
+    .reveal-on-scroll.is-visible {
+      opacity: 1;
+      transform: translateY(0) scale(1);
+    }
+
+    /* Interactive Card Hover Bounce */
+    .hover-tilt-bounce {
+      transition: transform 0.35s cubic-bezier(0.34, 1.56, 0.64, 1), box-shadow 0.35s ease, border-color 0.3s ease;
+    }
+    .hover-tilt-bounce:hover {
+      transform: translateY(-6px);
+    }
+
+    /* Glass Navigation */
+    .glass-nav {
+      backdrop-filter: blur(16px);
+      -webkit-backdrop-filter: blur(16px);
+    }
+  </style>
+</head>
+<body class="bg-sand-100 text-charcoal-900 dark:bg-slateGreen-950 dark:text-sand-100 font-sans antialiased selection:bg-sage-500 selection:text-white transition-colors duration-300 min-h-screen flex flex-col">
+
+  <!-- ======================================================== -->
+  <!-- TOAST NOTIFICATION POPUP (DOWNLOADS & ASSET UPDATES)    -->
+  <!-- ======================================================== -->
+  <div id="toast" class="fixed bottom-6 right-6 z-50 transform translate-y-28 opacity-0 transition-all duration-300 flex items-center gap-3.5 px-5 py-3.5 rounded-2xl shadow-2xl border pointer-events-none bg-slateGreen-900/95 text-white border-slateGreen-700/80 dark:bg-slateGreen-900/95 dark:border-sage-500/40 backdrop-blur-md max-w-md">
+    <div id="toast-icon-wrapper" class="w-10 h-10 rounded-xl bg-sage-500/20 text-sage-300 flex items-center justify-center shrink-0">
+      <svg id="toast-icon" class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2.5" d="M5 13l4 4L19 7"></path>
+      </svg>
+    </div>
+    <div>
+      <h4 id="toast-title" class="text-sm font-bold text-white leading-tight">Notification</h4>
+      <p id="toast-message" class="text-xs text-sand-300 mt-0.5 leading-snug">Operation completed successfully.</p>
+    </div>
+  </div>
+
+  <!-- ======================================================== -->
+  <!-- STICKY TOP NAVIGATION BAR                                -->
+  <!-- ======================================================== -->
+  <header class="sticky top-0 z-40 w-full glass-nav bg-sand-100/85 dark:bg-slateGreen-950/85 border-b border-sand-300/80 dark:border-slateGreen-800/80 transition-colors">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 h-20 flex items-center justify-between">
+      
+      <!-- Brand & Profile Avatar -->
+      <a href="#hero" class="flex items-center gap-3.5 group focus:outline-none focus:ring-2 focus:ring-sage-500 rounded-xl p-1">
+        <div class="relative w-11 h-11 rounded-full overflow-hidden border-2 border-sage-500/80 shadow-md group-hover:scale-105 transition-transform duration-300 bg-sand-200 dark:bg-slateGreen-800">
+          <img id="nav-avatar-img" src="FOTO-NANDO.jpg" alt="Fernando Ilham" class="w-full h-full object-cover object-top" onerror="this.onerror=null; this.src='https://ui-avatars.com/api/?name=Fernando+Ilham&background=2C3E35&color=E8F0EC';">
+        </div>
+        <div>
+          <span class="block text-sm sm:text-base font-extrabold tracking-tight text-slateGreen-800 dark:text-sand-100 group-hover:text-sage-600 dark:group-hover:text-sage-300 transition-colors font-display">
+            FERNANDO ILHAM
+          </span>
+          <span class="block text-[11px] font-medium text-slateGreen-600 dark:text-sand-400">
+            Finance &amp; E-Commerce Portfolio
+          </span>
+        </div>
+      </a>
+
+      <!-- Desktop Navigation Menu -->
+      <nav class="hidden lg:flex items-center gap-1">
+        <a href="#hero" class="px-3 py-1.5 rounded-lg text-xs font-semibold uppercase tracking-wider text-slateGreen-700 dark:text-sand-300 hover:text-sage-700 dark:hover:text-sage-300 hover:bg-sage-100/70 dark:hover:bg-slateGreen-800/60 transition-all">Home</a>
+        <a href="#summary" class="px-3 py-1.5 rounded-lg text-xs font-semibold uppercase tracking-wider text-slateGreen-700 dark:text-sand-300 hover:text-sage-700 dark:hover:text-sage-300 hover:bg-sage-100/70 dark:hover:bg-slateGreen-800/60 transition-all">Summary</a>
+        <a href="#experience" class="px-3 py-1.5 rounded-lg text-xs font-semibold uppercase tracking-wider text-slateGreen-700 dark:text-sand-300 hover:text-sage-700 dark:hover:text-sage-300 hover:bg-sage-100/70 dark:hover:bg-slateGreen-800/60 transition-all">Experience</a>
+        <a href="#gallery" class="px-3 py-1.5 rounded-lg text-xs font-semibold uppercase tracking-wider text-slateGreen-700 dark:text-sand-300 hover:text-sage-700 dark:hover:text-sage-300 hover:bg-sage-100/70 dark:hover:bg-slateGreen-800/60 transition-all">Gallery</a>
+        <a href="#certifications" class="px-3 py-1.5 rounded-lg text-xs font-semibold uppercase tracking-wider text-slateGreen-700 dark:text-sand-300 hover:text-sage-700 dark:hover:text-sage-300 hover:bg-sage-100/70 dark:hover:bg-slateGreen-800/60 transition-all">Certifications</a>
+        <a href="#skills" class="px-3 py-1.5 rounded-lg text-xs font-semibold uppercase tracking-wider text-slateGreen-700 dark:text-sand-300 hover:text-sage-700 dark:hover:text-sage-300 hover:bg-sage-100/70 dark:hover:bg-slateGreen-800/60 transition-all">Skills</a>
+        <a href="#projects" class="px-3 py-1.5 rounded-lg text-xs font-semibold uppercase tracking-wider text-slateGreen-700 dark:text-sand-300 hover:text-sage-700 dark:hover:text-sage-300 hover:bg-sage-100/70 dark:hover:bg-slateGreen-800/60 transition-all">Projects</a>
+      </nav>
+
+      <!-- Right Header Controls: Asset Studio Pill, Theme Toggle, CV CTA -->
+      <div class="flex items-center gap-2 sm:gap-3">
+        
+        <!-- Live Asset Manager Trigger Button -->
+        <button onclick="toggleAssetDrawer(true)" type="button" aria-label="Open Asset Manager" class="inline-flex items-center gap-1.5 px-3 py-2 text-xs font-bold rounded-xl border border-sage-300 dark:border-slateGreen-700 bg-sage-50/80 dark:bg-slateGreen-800/80 text-sage-800 dark:text-sage-200 hover:bg-sage-100 dark:hover:bg-slateGreen-700 hover:border-sage-500 transition-all shadow-sm">
+          <svg class="w-4 h-4 text-sage-600 dark:text-sage-300" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 16v1a3 3 0 003 3h10a3 3 0 003-3v-1m-4-8l-4-4m0 0L8 8m4-4v12"></path>
+          </svg>
+          <span class="hidden sm:inline">Asset Studio</span>
+          <span id="nav-custom-badge" class="hidden px-1.5 py-0.2 rounded-full text-[10px] bg-sage-500 text-white font-extrabold">0</span>
+        </button>
+
+        <!-- Dark / Light Mode Toggle Button -->
+        <button id="theme-toggle" type="button" aria-label="Toggle Calm Theme" class="p-2.5 rounded-xl border border-sand-300 dark:border-slateGreen-700 bg-sand-200/80 dark:bg-slateGreen-800/80 text-slateGreen-700 dark:text-sand-300 hover:text-sage-600 dark:hover:text-sage-300 hover:border-sage-400 transition-all">
+          <svg id="theme-toggle-light-icon" class="w-4 h-4 hidden" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 3v1m0 16v1m9-9h-1M4 12H3m15.364 6.364l-.707-.707M6.343 6.343l-.707-.707m12.728 0l-.707.707M6.343 17.657l-.707.707M16 12a4 4 0 11-8 0 4 4 0 018 0z"></path>
+          </svg>
+          <svg id="theme-toggle-dark-icon" class="w-4 h-4 hidden" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M20.354 15.354A9 9 0 018.646 3.646 9.003 9.003 0 0012 21a9.003 9.003 0 008.354-5.646z"></path>
+          </svg>
+        </button>
+
+        <!-- Direct CV Header CTA Button -->
+        <a id="nav-cv-download" href="CV-Fernando Ilham Pate Gheta 2026.pdf" download="CV-Fernando Ilham Pate Gheta 2026.pdf" onclick="notifyDownload('CV-Fernando Ilham Pate Gheta 2026.pdf')" class="hidden md:inline-flex items-center gap-2 px-4 py-2 text-xs font-bold uppercase tracking-wider text-white bg-slateGreen-800 hover:bg-slateGreen-700 dark:bg-sage-600 dark:hover:bg-sage-500 rounded-xl shadow-md hover:shadow-glow-sage transition-all transform hover:-translate-y-0.5">
+          <svg class="w-3.5 h-3.5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2.5" d="M4 16v1a3 3 0 003 3h10a3 3 0 003-3v-1m-4-4l-4 4m0 0l-4-4m4 4V4"></path>
+          </svg>
+          <span>CV (PDF)</span>
+        </a>
+
+        <!-- Mobile Menu Toggle Button -->
+        <button id="mobile-menu-btn" type="button" aria-label="Toggle Mobile Menu" class="lg:hidden p-2.5 rounded-xl border border-sand-300 dark:border-slateGreen-700 text-slateGreen-800 dark:text-sand-200 hover:bg-sand-200 dark:hover:bg-slateGreen-800">
+          <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16"></path>
+          </svg>
+        </button>
+      </div>
+
+    </div>
+
+    <!-- Mobile Dropdown Navigation -->
+    <div id="mobile-menu" class="hidden lg:hidden border-t border-sand-300 dark:border-slateGreen-800 bg-sand-100 dark:bg-slateGreen-950 px-5 pt-3 pb-6 space-y-1.5 shadow-2xl">
+      <a href="#hero" class="mobile-nav-link block px-3 py-2 rounded-xl text-sm font-semibold text-slateGreen-800 dark:text-sand-200 hover:bg-sage-100 dark:hover:bg-slateGreen-800">Home</a>
+      <a href="#summary" class="mobile-nav-link block px-3 py-2 rounded-xl text-sm font-semibold text-slateGreen-800 dark:text-sand-200 hover:bg-sage-100 dark:hover:bg-slateGreen-800">Professional Summary</a>
+      <a href="#experience" class="mobile-nav-link block px-3 py-2 rounded-xl text-sm font-semibold text-slateGreen-800 dark:text-sand-200 hover:bg-sage-100 dark:hover:bg-slateGreen-800">Work Experience</a>
+      <a href="#gallery" class="mobile-nav-link block px-3 py-2 rounded-xl text-sm font-semibold text-slateGreen-800 dark:text-sand-200 hover:bg-sage-100 dark:hover:bg-slateGreen-800">Activity Gallery</a>
+      <a href="#certifications" class="mobile-nav-link block px-3 py-2 rounded-xl text-sm font-semibold text-slateGreen-800 dark:text-sand-200 hover:bg-sage-100 dark:hover:bg-slateGreen-800">Certifications</a>
+      <a href="#skills" class="mobile-nav-link block px-3 py-2 rounded-xl text-sm font-semibold text-slateGreen-800 dark:text-sand-200 hover:bg-sage-100 dark:hover:bg-slateGreen-800">Skills &amp; Languages</a>
+      <a href="#projects" class="mobile-nav-link block px-3 py-2 rounded-xl text-sm font-semibold text-slateGreen-800 dark:text-sand-200 hover:bg-sage-100 dark:hover:bg-slateGreen-800">Example Projects</a>
+      <a href="#download-cv" class="mobile-nav-link block px-3 py-2 rounded-xl text-sm font-semibold text-slateGreen-800 dark:text-sand-200 hover:bg-sage-100 dark:hover:bg-slateGreen-800">Download CV</a>
+      
+      <div class="pt-3 flex flex-col gap-2">
+        <button onclick="toggleAssetDrawer(true)" class="w-full flex items-center justify-center gap-2 px-4 py-2.5 rounded-xl border border-sage-400 bg-sage-100 dark:bg-slateGreen-800 text-slateGreen-900 dark:text-sage-200 text-xs font-bold uppercase tracking-wider">
+          <svg class="w-4 h-4 text-sage-600" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 16v1a3 3 0 003 3h10a3 3 0 003-3v-1m-4-8l-4-4m0 0L8 8m4-4v12"></path></svg>
+          <span>Open Live Asset Studio</span>
+        </button>
+        <a href="CV-Fernando Ilham Pate Gheta 2026.pdf" download="CV-Fernando Ilham Pate Gheta 2026.pdf" onclick="notifyDownload('CV-Fernando Ilham Pate Gheta 2026.pdf')" class="w-full flex items-center justify-center gap-2 px-4 py-2.5 rounded-xl text-xs font-bold uppercase tracking-wider text-white bg-slateGreen-800 hover:bg-slateGreen-700 shadow-md">
+          <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 16v1a3 3 0 003 3h10a3 3 0 003-3v-1m-4-4l-4 4m0 0l-4-4m4 4V4"></path></svg>
+          <span>Download Official CV Document</span>
+        </a>
+      </div>
+    </div>
+  </header>
+
+  <main class="flex-grow">
+    
+    <!-- ======================================================== -->
+    <!-- 1. HEADER / HERO SECTION                                -->
+    <!-- 2-column aesthetic card: Left Bio & Links | Right Photo -->
+    <!-- ======================================================== -->
+    <section id="hero" class="relative py-14 sm:py-18 lg:py-24 border-b border-sand-300 dark:border-slateGreen-800/80 overflow-hidden bg-gradient-to-b from-sage-50/70 via-sand-100 to-sand-100 dark:from-slateGreen-900/40 dark:via-slateGreen-950 dark:to-slateGreen-950">
+      
+      <!-- Calm Ambient Glow Orbs -->
+      <div class="absolute -top-36 -left-36 w-[420px] h-[420px] bg-sage-200/40 dark:bg-sage-600/10 rounded-full blur-3xl pointer-events-none animate-pulse-glow"></div>
+      <div class="absolute top-1/3 -right-36 w-[440px] h-[440px] bg-terracotta-200/35 dark:bg-terracotta-500/10 rounded-full blur-3xl pointer-events-none animate-pulse-glow" style="animation-delay: -3s;"></div>
+
+      <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative">
+        <div class="reveal-on-scroll bg-white/80 dark:bg-slateGreen-900/70 rounded-3xl p-6 sm:p-10 md:p-12 lg:p-14 border border-sand-300 dark:border-slateGreen-800/90 shadow-card-calm dark:shadow-card-calm-dark backdrop-blur-md">
+          
+          <div class="grid grid-cols-1 lg:grid-cols-12 gap-10 lg:gap-14 items-center">
+            
+            <!-- LEFT COLUMN: Bio, Title, Contacts, & Social Links -->
+            <div class="lg:col-span-7 flex flex-col justify-center order-2 lg:order-1">
+              
+              <!-- Calm Availability Badge -->
+              <div class="inline-flex items-center gap-2.5 px-4 py-1.5 rounded-full text-xs font-semibold bg-sage-100 text-sage-800 dark:bg-sage-950/70 dark:text-sage-200 dark:border dark:border-sage-500/30 w-fit mb-5 shadow-sm">
+                <span class="relative flex h-2 w-2">
+                  <span class="animate-ping absolute inline-flex h-full w-full rounded-full bg-sage-400 opacity-75"></span>
+                  <span class="relative inline-flex rounded-full h-2 w-2 bg-sage-600 dark:bg-sage-400"></span>
+                </span>
+                <span>Finance Concentration • E-Commerce Operations</span>
+              </div>
+
+              <!-- Full Name -->
+              <h1 class="text-3xl sm:text-4xl md:text-5xl font-extrabold tracking-tight text-slateGreen-900 dark:text-sand-100 uppercase font-display leading-[1.12] mb-3.5">
+                FERNANDO ILHAM PATE GHETA
+              </h1>
+
+              <!-- Subtitle from requirements -->
+              <p class="text-base sm:text-lg md:text-xl font-semibold text-sage-700 dark:text-sage-300 mb-6 leading-snug">
+                Management Graduate (Finance Concentration) &amp; E-Commerce Operations Specialist
+              </p>
+
+              <!-- Structured Contact Info & Location -->
+              <div class="space-y-3.5 text-xs sm:text-sm text-charcoal-700 dark:text-sand-300 mb-8">
+                
+                <!-- Phone & WhatsApp -->
+                <div class="flex items-center gap-3">
+                  <span class="w-8 h-8 rounded-xl bg-sage-100 dark:bg-slateGreen-800 flex items-center justify-center text-sage-700 dark:text-sage-300 shrink-0">
+                    <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                      <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 5a2 2 0 012-2h3.28a1 1 0 01.948.684l1.498 4.493a1 1 0 01-.502 1.21l-2.257 1.13a11.042 11.042 0 005.516 5.516l1.13-2.257a1 1 0 011.21-.502l4.493 1.498a1 1 0 01.684.949V19a2 2 0 01-2 2h-1C9.716 21 3 14.284 3 6V5z"></path>
+                    </svg>
+                  </span>
+                  <div class="flex flex-wrap items-center gap-2.5">
+                    <span class="font-semibold text-slateGreen-900 dark:text-sand-100">+62 85641768323</span>
+                    <a href="https://wa.me/6285641768323" target="_blank" rel="noopener noreferrer" class="inline-flex items-center gap-1 text-[11px] px-2.5 py-0.5 rounded-full bg-sage-200/80 text-sage-800 dark:bg-slateGreen-800 dark:text-sage-300 hover:bg-sage-300 dark:hover:bg-slateGreen-700 transition-colors font-semibold">
+                      <span>WhatsApp</span>
+                      <svg class="w-3 h-3" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M10 6H6a2 2 0 00-2 2v10a2 2 0 002 2h10a2 2 0 002-2v-4M14 4h6m0 0v6m0-6L10 14"></path></svg>
+                    </a>
+                  </div>
+                </div>
+
+                <!-- Email -->
+                <div class="flex items-center gap-3">
+                  <span class="w-8 h-8 rounded-xl bg-sage-100 dark:bg-slateGreen-800 flex items-center justify-center text-sage-700 dark:text-sage-300 shrink-0">
+                    <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                      <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 8l7.89 5.26a2 2 0 002.22 0L21 8M5 19h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z"></path>
+                    </svg>
+                  </span>
+                  <a href="mailto:fernandoilham04@gmail.com" class="font-medium text-slateGreen-900 dark:text-sand-100 hover:text-sage-600 dark:hover:text-sage-300 transition-colors">
+                    fernandoilham04@gmail.com
+                  </a>
+                </div>
+
+                <!-- Location -->
+                <div class="flex items-center gap-3">
+                  <span class="w-8 h-8 rounded-xl bg-sage-100 dark:bg-slateGreen-800 flex items-center justify-center text-sage-700 dark:text-sage-300 shrink-0">
+                    <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                      <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17.657 16.657L13.414 20.9a1.998 1.998 0 01-2.827 0l-4.244-4.243a8 8 0 1111.314 0z"></path>
+                      <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 11a3 3 0 11-6 0 3 3 0 016 0z"></path>
+                    </svg>
+                  </span>
+                  <span class="font-medium text-slateGreen-900 dark:text-sand-200">
+                    Rajeg Terrace, Kab. Tangerang, Banten, Indonesia
+                  </span>
+                </div>
+
+                <!-- LinkedIn Connection -->
+                <div class="flex items-center gap-3">
+                  <span class="w-8 h-8 rounded-xl bg-sage-100 dark:bg-slateGreen-800 flex items-center justify-center text-sage-700 dark:text-sage-300 shrink-0">
+                    <svg class="w-4 h-4 text-[#0077b5]" fill="currentColor" viewBox="0 0 24 24"><path d="M19 0h-14c-2.761 0-5 2.239-5 5v14c0 2.761 2.239 5 5 5h14c2.762 0 5-2.239 5-5v-14c0-2.761-2.238-5-5-5zm-11 19h-3v-11h3v11zm-1.5-12.268c-.966 0-1.75-.79-1.75-1.764s.784-1.764 1.75-1.764 1.75.79 1.75 1.764-.783 1.764-1.75 1.764zm13.5 12.268h-3v-5.604c0-3.368-4-3.113-4 0v5.604h-3v-11h3v1.765c1.396-2.586 7-2.777 7 2.476v6.759z"/></svg>
+                  </span>
+                  <a href="https://www.linkedin.com/in/fernando-ilham-1991251b4" target="_blank" rel="noopener noreferrer" class="font-medium text-slateGreen-900 dark:text-sand-100 hover:text-sage-600 dark:hover:text-sage-300 transition-colors flex items-center gap-1.5">
+                    <span>linkedin.com/in/fernando-ilham-1991251b4</span>
+                    <svg class="w-3.5 h-3.5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M10 6H6a2 2 0 00-2 2v10a2 2 0 002 2h10a2 2 0 002-2v-4M14 4h6m0 0v6m0-6L10 14"></path></svg>
+                  </a>
+                </div>
+
+              </div>
+
+              <!-- Hero CTAs -->
+              <div class="flex flex-wrap items-center gap-3.5">
+                <a id="hero-cv-download" href="CV-Fernando Ilham Pate Gheta 2026.pdf" download="CV-Fernando Ilham Pate Gheta 2026.pdf" onclick="notifyDownload('CV-Fernando Ilham Pate Gheta 2026.pdf')" class="inline-flex items-center gap-2.5 px-6 py-3.5 rounded-2xl bg-slateGreen-800 hover:bg-slateGreen-700 dark:bg-sage-600 dark:hover:bg-sage-500 text-white font-bold text-xs uppercase tracking-wider shadow-lg hover:shadow-glow-sage transition-all transform hover:-translate-y-0.5">
+                  <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2.5" d="M4 16v1a3 3 0 003 3h10a3 3 0 003-3v-1m-4-4l-4 4m0 0l-4-4m4 4V4"></path>
+                  </svg>
+                  <span>Download CV (PDF)</span>
+                </a>
+
+                <a href="#projects" class="inline-flex items-center gap-2 px-5 py-3.5 rounded-2xl bg-sand-200 dark:bg-slateGreen-800 text-slateGreen-900 dark:text-sand-200 font-bold text-xs uppercase tracking-wider hover:bg-sand-300 dark:hover:bg-slateGreen-700 transition-all">
+                  <span>Explore Projects</span>
+                  <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"></path></svg>
+                </a>
+
+                <button onclick="toggleAssetDrawer(true)" class="inline-flex items-center gap-1.5 px-4 py-3.5 rounded-2xl border border-sage-300 dark:border-slateGreen-700 text-slateGreen-700 dark:text-sage-300 font-semibold text-xs hover:border-sage-500 hover:bg-sage-50 dark:hover:bg-slateGreen-800 transition-all">
+                  <svg class="w-4 h-4 text-sage-600" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 6V4m0 2a2 2 0 100 4m0-4a2 2 0 110 4m-6 8a2 2 0 100-4m0 4a2 2 0 110-4m0 4v2m0-6V4m6 6v10m6-2a2 2 0 100-4m0 4a2 2 0 110-4m0 4v2m0-6V4"></path></svg>
+                  <span>Live Upload Panel</span>
+                </button>
+              </div>
+
+            </div>
+
+            <!-- RIGHT COLUMN: Floating Profile Image "FOTO-NANDO.jpg" -->
+            <!-- Effect: Smooth floating / subtle bounce on hover with soft shadow glow -->
+            <div class="lg:col-span-5 flex justify-center order-1 lg:order-2">
+              <div class="relative group">
+                
+                <!-- Gentle Glow Ring Behind Image -->
+                <div class="absolute -inset-4 bg-gradient-to-tr from-sage-500/30 via-sage-400/20 to-terracotta-400/30 rounded-[2.5rem] blur-xl opacity-70 group-hover:opacity-100 group-hover:scale-105 transition-all duration-500"></div>
+
+                <!-- Card container with floating effect -->
+                <div class="relative animate-float rounded-[2rem] p-3 bg-white/95 dark:bg-slateGreen-900 border border-sand-300 dark:border-slateGreen-800 shadow-2xl transition-transform duration-500 hover:scale-[1.02]">
+                  
+                  <!-- Overflow-hidden wrapper for image hover zoom -->
+                  <div class="w-64 h-64 sm:w-72 sm:h-72 md:w-80 md:h-80 rounded-[1.6rem] overflow-hidden bg-sand-200 dark:bg-slateGreen-800 relative shadow-inner">
+                    <img id="hero-profile-img" src="FOTO-NANDO.jpg" alt="Fernando Ilham Pate Gheta" class="w-full h-full object-cover object-top transform group-hover:scale-108 transition-transform duration-700 ease-out" onerror="this.onerror=null; this.src='https://ui-avatars.com/api/?name=Fernando+Ilham&size=500&background=2C3E35&color=E8F0EC';">
+                    
+                    <!-- Soft Calm Gradient Overlay on bottom -->
+                    <div class="absolute inset-0 bg-gradient-to-t from-slateGreen-950/75 via-transparent to-transparent opacity-60"></div>
+
+                    <!-- Subtle bottom pill -->
+                    <div class="absolute bottom-3 left-3 right-3 text-center py-1.5 px-3 rounded-xl bg-slateGreen-950/70 backdrop-blur-md border border-white/10 text-sand-100 text-[11px] font-semibold tracking-wide">
+                      Fernando Ilham Pate Gheta
+                    </div>
+                  </div>
+
+                  <!-- Floating Verified Specialist Badge -->
+                  <div class="absolute -bottom-3 -right-3 bg-sage-600 text-white p-3 rounded-2xl shadow-xl flex items-center justify-center border-4 border-white dark:border-slateGreen-900 animate-bounce-subtle" title="Verified Finance & E-Commerce Specialist">
+                    <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                      <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2.5" d="M5 13l4 4L19 7"></path>
+                    </svg>
+                  </div>
+
+                </div>
+
+              </div>
+            </div>
+
+          </div>
+
+        </div>
+      </div>
+    </section>
+
+    <!-- ======================================================== -->
+    <!-- 2. PROFESSIONAL SUMMARY                                  -->
+    <!-- Grid layout with "hijau-nando.jpg" on right + soft zoom  -->
+    <!-- ======================================================== -->
+    <section id="summary" class="py-16 sm:py-20 border-b border-sand-300 dark:border-slateGreen-800/80 bg-white/70 dark:bg-slateGreen-950/50">
+      <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+        
+        <!-- Section Header Pill -->
+        <div class="flex items-center gap-3 mb-8 reveal-on-scroll">
+          <span class="w-8 h-1 bg-sage-500 rounded-full"></span>
+          <span class="text-xs font-bold uppercase tracking-wider text-sage-700 dark:text-sage-400">About Me</span>
+          <span class="text-xs text-sand-400 dark:text-slateGreen-600">•</span>
+          <h2 class="text-2xl sm:text-3xl font-extrabold tracking-tight text-slateGreen-900 dark:text-sand-100 font-display">
+            Professional Summary
+          </h2>
+        </div>
+
+        <!-- Grid Layout: Left Text & Metrics | Right: hijau-nando.jpg -->
+        <div class="grid grid-cols-1 lg:grid-cols-12 gap-8 lg:gap-12 items-center">
+          
+          <!-- LEFT SIDE: Exact Requested Summary Text & Strategic Highlights -->
+          <div class="lg:col-span-7 xl:col-span-8 space-y-6 reveal-on-scroll">
+            
+            <div class="relative bg-sand-100/90 dark:bg-slateGreen-900/80 rounded-3xl p-6 sm:p-9 border border-sand-300 dark:border-slateGreen-800 shadow-card-calm dark:shadow-card-calm-dark">
+              <!-- Aesthetic Quotation SVG Watermark -->
+              <svg class="w-12 h-12 text-sage-400/25 absolute -top-4 -left-3" fill="currentColor" viewBox="0 0 32 32">
+                <path d="M10 8c-3.3 0-6 2.7-6 6v10h10V14H8c0-2.2 1.8-4 4-4V8zm14 0c-3.3 0-6 2.7-6 6v10h10V14h-6c0-2.2 1.8-4 4-4V8z"/>
+              </svg>
+
+              <!-- Exact prompt text -->
+              <p class="text-base sm:text-lg text-slateGreen-900 dark:text-sand-200 leading-relaxed font-normal">
+                Results-driven Management Graduate (Finance Concentration) with extensive experience bridging financial governance, internal control, risk management, and digital business operations. Proven track record in public sector risk compliance (SPIP &amp; PIPK) as well as multi-platform e-commerce optimization, successfully scaling marketplace revenue and executing data-driven marketing campaigns.
+              </p>
+            </div>
+
+            <!-- Key Quantitative & Functional Achievements -->
+            <div class="grid grid-cols-1 sm:grid-cols-3 gap-4 pt-1">
+              <div class="p-4 rounded-2xl bg-sage-50/80 dark:bg-slateGreen-900/60 border border-sage-200 dark:border-slateGreen-800 hover-tilt-bounce">
+                <div class="text-xl sm:text-2xl font-extrabold text-sage-700 dark:text-sage-300 font-display mb-1">SPIP &amp; PIPK</div>
+                <div class="text-xs font-bold text-slateGreen-900 dark:text-sand-100">Public Sector Compliance</div>
+                <div class="text-xs text-slateGreen-600 dark:text-sand-400 mt-1">FY 2025/2026 financial risk governance</div>
+              </div>
+
+              <div class="p-4 rounded-2xl bg-sage-50/80 dark:bg-slateGreen-900/60 border border-sage-200 dark:border-slateGreen-800 hover-tilt-bounce">
+                <div class="text-xl sm:text-2xl font-extrabold text-sage-700 dark:text-sage-300 font-display mb-1">IDR 1 Billion</div>
+                <div class="text-xs font-bold text-slateGreen-900 dark:text-sand-100">TikTok Shop GMV</div>
+                <div class="text-xs text-slateGreen-600 dark:text-sand-400 mt-1">Generated within a 3-month operational sprint</div>
+              </div>
+
+              <div class="p-4 rounded-2xl bg-sage-50/80 dark:bg-slateGreen-900/60 border border-sage-200 dark:border-slateGreen-800 hover-tilt-bounce">
+                <div class="text-xl sm:text-2xl font-extrabold text-sage-700 dark:text-sage-300 font-display mb-1">+25% &amp; +50%</div>
+                <div class="text-xs font-bold text-slateGreen-900 dark:text-sand-100">Marketplace &amp; Live Growth</div>
+                <div class="text-xs text-slateGreen-600 dark:text-sand-400 mt-1">Shopee revenue boost &amp; live commerce scaling</div>
+              </div>
+            </div>
+
+            <!-- Core Pillar Badges -->
+            <div class="flex flex-wrap gap-2 pt-1">
+              <span class="px-3 py-1 rounded-xl text-xs font-semibold bg-sage-100 text-sage-800 dark:bg-slateGreen-800 dark:text-sage-200">Financial Governance</span>
+              <span class="px-3 py-1 rounded-xl text-xs font-semibold bg-sage-100 text-sage-800 dark:bg-slateGreen-800 dark:text-sage-200">Internal Control &amp; Risk Compliance</span>
+              <span class="px-3 py-1 rounded-xl text-xs font-semibold bg-terracotta-100 text-terracotta-700 dark:bg-slateGreen-800 dark:text-terracotta-300">BigSeller Omnichannel ERP</span>
+              <span class="px-3 py-1 rounded-xl text-xs font-semibold bg-sand-300 text-slateGreen-800 dark:bg-slateGreen-800 dark:text-sand-200">ROAS &amp; Performance Marketing</span>
+              <span class="px-3 py-1 rounded-xl text-xs font-semibold bg-sage-100 text-sage-800 dark:bg-slateGreen-800 dark:text-sage-200">Live Commerce Management</span>
+            </div>
+
+          </div>
+
+          <!-- RIGHT SIDE: hijau-nando.jpg Placed Cleanly with Soft Zoom Effect -->
+          <div class="lg:col-span-5 xl:col-span-4 flex justify-center reveal-on-scroll">
+            <div class="relative group w-full max-w-sm">
+              
+              <!-- Subtle decorative accent glow -->
+              <div class="absolute -inset-2 bg-gradient-to-tr from-sage-500/30 via-sage-300/20 to-slateGreen-600/30 rounded-3xl blur-md group-hover:blur-lg transition duration-500"></div>
+
+              <div class="relative rounded-3xl overflow-hidden bg-sand-100 dark:bg-slateGreen-900 border border-sand-300 dark:border-slateGreen-800 shadow-xl">
+                <!-- Aspect Ratio Container matching portrait attire -->
+                <div class="w-full aspect-[3/4] sm:aspect-[4/5] overflow-hidden bg-sand-200 dark:bg-slateGreen-800 relative">
+                  <img id="summary-accent-img" src="hijau-nando.jpg" alt="Fernando Ilham - Professional Attire" class="w-full h-full object-cover object-center transform group-hover:scale-106 transition-transform duration-700 ease-out" onerror="this.onerror=null; this.src='FOTO-NANDO.jpg';">
+                  
+                  <!-- Bottom caption overlay -->
+                  <div class="absolute inset-x-0 bottom-0 p-5 bg-gradient-to-t from-slateGreen-950 via-slateGreen-950/70 to-transparent text-white">
+                    <p class="text-xs uppercase tracking-wider text-sage-300 font-bold">Executive Profile</p>
+                    <p class="text-sm sm:text-base font-bold font-display">Fernando Ilham Pate Gheta</p>
+                    <p class="text-xs text-sand-300">Finance &amp; E-Commerce Management</p>
+                  </div>
+                </div>
+              </div>
+
+            </div>
+          </div>
+
+        </div>
+
+      </div>
+    </section>
+
+    <!-- ======================================================== -->
+    <!-- 3. WORK EXPERIENCE SECTION                               -->
+    <!-- Three structured career entries                          -->
+    <!-- ======================================================== -->
+    <section id="experience" class="py-16 sm:py-20 border-b border-sand-300 dark:border-slateGreen-800/80 bg-sand-100/60 dark:bg-slateGreen-950">
+      <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+        
+        <!-- Section Header -->
+        <div class="max-w-3xl mb-12 reveal-on-scroll">
+          <div class="flex items-center gap-3 mb-3">
+            <span class="w-8 h-1 bg-sage-500 rounded-full"></span>
+            <span class="text-xs font-bold uppercase tracking-wider text-sage-700 dark:text-sage-400">Career History</span>
+          </div>
+          <h2 class="text-2xl sm:text-3xl md:text-4xl font-extrabold tracking-tight text-slateGreen-900 dark:text-sand-100 font-display">
+            Work Experience
+          </h2>
+          <p class="text-sm sm:text-base text-slateGreen-600 dark:text-sand-400 mt-2">
+            Structured career journey bridging ministerial public finance governance, multi-platform e-commerce scale-up, and marketplace growth operations.
+          </p>
+        </div>
+
+        <!-- Experience Cards Stack -->
+        <div class="space-y-8">
+
+          <!-- Entry 1: Kementerian Kelautan Dan Perikanan (Intern) -->
+          <article class="reveal-on-scroll relative rounded-3xl bg-white/90 dark:bg-slateGreen-900/85 border border-sand-300 dark:border-slateGreen-800 p-6 sm:p-9 shadow-card-calm dark:shadow-card-calm-dark hover-tilt-bounce">
+            <div class="flex flex-col md:flex-row md:items-center justify-between gap-4 pb-5 border-b border-sand-200 dark:border-slateGreen-800">
+              <div>
+                <div class="inline-flex items-center gap-2 px-3 py-1 rounded-full text-xs font-semibold bg-sage-100 text-sage-800 dark:bg-slateGreen-800 dark:text-sage-200 mb-2">
+                  <span class="w-2 h-2 rounded-full bg-sage-500"></span>
+                  <span>Public Sector &amp; Government Finance</span>
+                </div>
+                <h3 class="text-xl sm:text-2xl font-bold text-slateGreen-900 dark:text-sand-100 font-display">
+                  Financial Analyst Intern
+                </h3>
+                <p class="text-base font-semibold text-sage-700 dark:text-sage-300 mt-0.5">
+                  Kementerian Kelautan Dan Perikanan (Intern)
+                </p>
+              </div>
+
+              <!-- Period Badge -->
+              <div class="inline-flex items-center gap-2 px-4 py-2 rounded-xl bg-sand-200 dark:bg-slateGreen-800 text-slateGreen-800 dark:text-sand-200 text-xs sm:text-sm font-semibold shrink-0">
+                <svg class="w-4 h-4 text-sage-600 dark:text-sage-400" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                  <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M8 7V3m8 4V3m-9 8h10M5 21h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v12a2 2 0 002 2z"></path>
+                </svg>
+                <span>Jan 2026 – Jun 2026</span>
+              </div>
+            </div>
+
+            <!-- Bullet Points from User Request -->
+            <ul class="mt-6 space-y-3.5 text-sm sm:text-base text-slateGreen-700 dark:text-sand-300">
+              <li class="flex items-start gap-3">
+                <span class="w-5 h-5 rounded-full bg-sage-100 dark:bg-slateGreen-800 text-sage-600 dark:text-sage-400 flex items-center justify-center shrink-0 mt-0.5">
+                  <svg class="w-3.5 h-3.5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2.5" d="M5 13l4 4L19 7"></path></svg>
+                </span>
+                <span>Contributed to the preparation, analysis, and reporting of <strong>SPIP</strong> and <strong>PIPK</strong> for FY 2025.</span>
+              </li>
+              <li class="flex items-start gap-3">
+                <span class="w-5 h-5 rounded-full bg-sage-100 dark:bg-slateGreen-800 text-sage-600 dark:text-sage-400 flex items-center justify-center shrink-0 mt-0.5">
+                  <svg class="w-3.5 h-3.5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2.5" d="M5 13l4 4L19 7"></path></svg>
+                </span>
+                <span>Participated in organizational risk assessment and internal control framework development.</span>
+              </li>
+              <li class="flex items-start gap-3">
+                <span class="w-5 h-5 rounded-full bg-sage-100 dark:bg-slateGreen-800 text-sage-600 dark:text-sage-400 flex items-center justify-center shrink-0 mt-0.5">
+                  <svg class="w-3.5 h-3.5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2.5" d="M5 13l4 4L19 7"></path></svg>
+                </span>
+                <span>Assisted in drafting the 2026 Annual Work Plan.</span>
+              </li>
+            </ul>
+
+            <!-- Tags -->
+            <div class="mt-6 pt-4 border-t border-sand-200 dark:border-slateGreen-800/80 flex flex-wrap gap-2">
+              <span class="text-xs px-2.5 py-1 rounded-lg bg-sand-200 dark:bg-slateGreen-800 text-slateGreen-800 dark:text-sand-300 font-medium">SPIP Reporting</span>
+              <span class="text-xs px-2.5 py-1 rounded-lg bg-sand-200 dark:bg-slateGreen-800 text-slateGreen-800 dark:text-sand-300 font-medium">PIPK Financial Controls</span>
+              <span class="text-xs px-2.5 py-1 rounded-lg bg-sand-200 dark:bg-slateGreen-800 text-slateGreen-800 dark:text-sand-300 font-medium">Internal Risk Assessment</span>
+              <span class="text-xs px-2.5 py-1 rounded-lg bg-sand-200 dark:bg-slateGreen-800 text-slateGreen-800 dark:text-sand-300 font-medium">Work Plan 2026</span>
+            </div>
+          </article>
+
+          <!-- Entry 2: Hanke Koper Indonesia -->
+          <article class="reveal-on-scroll relative rounded-3xl bg-white/90 dark:bg-slateGreen-900/85 border border-sand-300 dark:border-slateGreen-800 p-6 sm:p-9 shadow-card-calm dark:shadow-card-calm-dark hover-tilt-bounce">
+            <div class="flex flex-col md:flex-row md:items-center justify-between gap-4 pb-5 border-b border-sand-200 dark:border-slateGreen-800">
+              <div>
+                <div class="inline-flex items-center gap-2 px-3 py-1 rounded-full text-xs font-semibold bg-terracotta-100 text-terracotta-700 dark:bg-slateGreen-800 dark:text-terracotta-300 mb-2">
+                  <span class="w-2 h-2 rounded-full bg-terracotta-500"></span>
+                  <span>E-Commerce Scaling &amp; Leadership</span>
+                </div>
+                <h3 class="text-xl sm:text-2xl font-bold text-slateGreen-900 dark:text-sand-100 font-display">
+                  E-Commerce &amp; Digital Marketing Manager
+                </h3>
+                <p class="text-base font-semibold text-sage-700 dark:text-sage-300 mt-0.5">
+                  Hanke Koper Indonesia
+                </p>
+              </div>
+
+              <!-- Period Badge -->
+              <div class="inline-flex items-center gap-2 px-4 py-2 rounded-xl bg-sand-200 dark:bg-slateGreen-800 text-slateGreen-800 dark:text-sand-200 text-xs sm:text-sm font-semibold shrink-0">
+                <svg class="w-4 h-4 text-sage-600 dark:text-sage-400" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                  <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M8 7V3m8 4V3m-9 8h10M5 21h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v12a2 2 0 002 2z"></path>
+                </svg>
+                <span>Jun 2025 – Dec 2025</span>
+              </div>
+            </div>
+
+            <!-- Bullet Points from User Request -->
+            <ul class="mt-6 space-y-3.5 text-sm sm:text-base text-slateGreen-700 dark:text-sand-300">
+              <li class="flex items-start gap-3">
+                <span class="w-5 h-5 rounded-full bg-sage-100 dark:bg-slateGreen-800 text-sage-600 dark:text-sage-400 flex items-center justify-center shrink-0 mt-0.5">
+                  <svg class="w-3.5 h-3.5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2.5" d="M5 13l4 4L19 7"></path></svg>
+                </span>
+                <span>Managed <strong>Shopee</strong>, <strong>TikTok Shop</strong>, and <strong>Blibli</strong> using <strong>BigSeller</strong> integration.</span>
+              </li>
+              <li class="flex items-start gap-3">
+                <span class="w-5 h-5 rounded-full bg-sage-100 dark:bg-slateGreen-800 text-sage-600 dark:text-sage-400 flex items-center justify-center shrink-0 mt-0.5">
+                  <svg class="w-3.5 h-3.5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2.5" d="M5 13l4 4L19 7"></path></svg>
+                </span>
+                <span>Achieved <strong>+25% Shopee revenue</strong> and <strong>IDR 1 Billion TikTok Shop sales</strong> in 3 months.</span>
+              </li>
+              <li class="flex items-start gap-3">
+                <span class="w-5 h-5 rounded-full bg-sage-100 dark:bg-slateGreen-800 text-sage-600 dark:text-sage-400 flex items-center justify-center shrink-0 mt-0.5">
+                  <svg class="w-3.5 h-3.5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2.5" d="M5 13l4 4L19 7"></path></svg>
+                </span>
+                <span>Evaluated ad performance (<strong>ROAS/ROI</strong>) and planned peak date/seasonal campaigns.</span>
+              </li>
+            </ul>
+
+            <!-- Tags -->
+            <div class="mt-6 pt-4 border-t border-sand-200 dark:border-slateGreen-800/80 flex flex-wrap gap-2">
+              <span class="text-xs px-2.5 py-1 rounded-lg bg-sand-200 dark:bg-slateGreen-800 text-slateGreen-800 dark:text-sand-300 font-medium">BigSeller Omnichannel</span>
+              <span class="text-xs px-2.5 py-1 rounded-lg bg-sand-200 dark:bg-slateGreen-800 text-slateGreen-800 dark:text-sand-300 font-medium">Shopee &amp; TikTok Shop</span>
+              <span class="text-xs px-2.5 py-1 rounded-lg bg-sand-200 dark:bg-slateGreen-800 text-slateGreen-800 dark:text-sand-300 font-medium">IDR 1B Campaign Sprint</span>
+              <span class="text-xs px-2.5 py-1 rounded-lg bg-sand-200 dark:bg-slateGreen-800 text-slateGreen-800 dark:text-sand-300 font-medium">ROAS / ROI Optimization</span>
+            </div>
+          </article>
+
+          <!-- Entry 3: Orca.Essential -->
+          <article class="reveal-on-scroll relative rounded-3xl bg-white/90 dark:bg-slateGreen-900/85 border border-sand-300 dark:border-slateGreen-800 p-6 sm:p-9 shadow-card-calm dark:shadow-card-calm-dark hover-tilt-bounce">
+            <div class="flex flex-col md:flex-row md:items-center justify-between gap-4 pb-5 border-b border-sand-200 dark:border-slateGreen-800">
+              <div>
+                <div class="inline-flex items-center gap-2 px-3 py-1 rounded-full text-xs font-semibold bg-sage-100 text-sage-800 dark:bg-slateGreen-800 dark:text-sage-200 mb-2">
+                  <span class="w-2 h-2 rounded-full bg-sage-500"></span>
+                  <span>Marketplace Execution &amp; Live Commerce</span>
+                </div>
+                <h3 class="text-xl sm:text-2xl font-bold text-slateGreen-900 dark:text-sand-100 font-display">
+                  Marketing Team – E-Commerce Specialist
+                </h3>
+                <p class="text-base font-semibold text-sage-700 dark:text-sage-300 mt-0.5">
+                  Orca.Essential
+                </p>
+              </div>
+
+              <!-- Period Badge -->
+              <div class="inline-flex items-center gap-2 px-4 py-2 rounded-xl bg-sand-200 dark:bg-slateGreen-800 text-slateGreen-800 dark:text-sand-200 text-xs sm:text-sm font-semibold shrink-0">
+                <svg class="w-4 h-4 text-sage-600 dark:text-sage-400" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                  <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M8 7V3m8 4V3m-9 8h10M5 21h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v12a2 2 0 002 2z"></path>
+                </svg>
+                <span>Mar 2023 – Mar 2025</span>
+              </div>
+            </div>
+
+            <!-- Bullet Points from User Request -->
+            <ul class="mt-6 space-y-3.5 text-sm sm:text-base text-slateGreen-700 dark:text-sand-300">
+              <li class="flex items-start gap-3">
+                <span class="w-5 h-5 rounded-full bg-sage-100 dark:bg-slateGreen-800 text-sage-600 dark:text-sage-400 flex items-center justify-center shrink-0 mt-0.5">
+                  <svg class="w-3.5 h-3.5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2.5" d="M5 13l4 4L19 7"></path></svg>
+                </span>
+                <span>End-to-end marketplace operations, storefront optimization, and flash sales.</span>
+              </li>
+              <li class="flex items-start gap-3">
+                <span class="w-5 h-5 rounded-full bg-sage-100 dark:bg-slateGreen-800 text-sage-600 dark:text-sage-400 flex items-center justify-center shrink-0 mt-0.5">
+                  <svg class="w-3.5 h-3.5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2.5" d="M5 13l4 4L19 7"></path></svg>
+                </span>
+                <span>Managed live streaming operations, boosting live commerce sales by over 50%.</span>
+              </li>
+            </ul>
+
+            <!-- Tags -->
+            <div class="mt-6 pt-4 border-t border-sand-200 dark:border-slateGreen-800/80 flex flex-wrap gap-2">
+              <span class="text-xs px-2.5 py-1 rounded-lg bg-sand-200 dark:bg-slateGreen-800 text-slateGreen-800 dark:text-sand-300 font-medium">Storefront Architecture</span>
+              <span class="text-xs px-2.5 py-1 rounded-lg bg-sand-200 dark:bg-slateGreen-800 text-slateGreen-800 dark:text-sand-300 font-medium">Flash Sales Execution</span>
+              <span class="text-xs px-2.5 py-1 rounded-lg bg-sand-200 dark:bg-slateGreen-800 text-slateGreen-800 dark:text-sand-300 font-medium">Live Streaming Management</span>
+              <span class="text-xs px-2.5 py-1 rounded-lg bg-sand-200 dark:bg-slateGreen-800 text-slateGreen-800 dark:text-sand-300 font-medium">+50% Sales Boost</span>
+            </div>
+          </article>
+
+        </div>
+
+      </div>
+    </section>
+
+    <!-- ======================================================== -->
+    <!-- 4. GALLERY SECTION (Immediately after Work Experience)  -->
+    <!-- Responsive 3-column grid featuring kkp-n, tt-n, lk-n     -->
+    <!-- Effect: Hover bounce, zoom-in on hover, scroll entrance  -->
+    <!-- ======================================================== -->
+    <section id="gallery" class="py-16 sm:py-20 border-b border-sand-300 dark:border-slateGreen-800/80 bg-white dark:bg-slateGreen-950/60">
+      <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+        
+        <!-- Section Header -->
+        <div class="flex flex-col md:flex-row md:items-end justify-between mb-12 gap-4 reveal-on-scroll">
+          <div>
+            <div class="flex items-center gap-3 mb-3">
+              <span class="w-8 h-1 bg-sage-500 rounded-full"></span>
+              <span class="text-xs font-bold uppercase tracking-wider text-sage-700 dark:text-sage-400">Documentation &amp; Proof of Work</span>
+            </div>
+            <h2 class="text-2xl sm:text-3xl md:text-4xl font-extrabold tracking-tight text-slateGreen-900 dark:text-sand-100 font-display">
+              Activity &amp; Project Gallery
+            </h2>
+          </div>
+          <p class="text-xs sm:text-sm text-slateGreen-600 dark:text-sand-400 max-w-md">
+            Visual highlights from government financial analysis, live studio commerce, and business analytics. Click any card to preview full size.
+          </p>
+        </div>
+
+        <!-- Responsive 3-Column Grid -->
+        <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 lg:gap-8">
+          
+          <!-- Column 1: kkp-n.jpg (Caption: Ministry Internship Portfolio) -->
+          <figure class="reveal-on-scroll group relative rounded-3xl overflow-hidden bg-sand-200 dark:bg-slateGreen-900 border border-sand-300 dark:border-slateGreen-800 shadow-card-calm dark:shadow-card-calm-dark hover-tilt-bounce cursor-pointer" onclick="openLightboxFromGallery(1)">
+            <div class="w-full aspect-[3/4] sm:aspect-[4/5] overflow-hidden relative">
+              <img id="gallery-img-1" src="kkp-n.jpg" alt="Ministry Internship Portfolio" class="w-full h-full object-cover object-center group-hover:scale-106 transition-transform duration-700 ease-out" loading="lazy">
+              
+              <!-- Gradient Overlay -->
+              <div class="absolute inset-0 bg-gradient-to-t from-slateGreen-950/85 via-slateGreen-950/35 to-transparent opacity-75 group-hover:opacity-90 transition-opacity"></div>
+              
+              <!-- Zoom Indicator Icon -->
+              <div class="absolute top-4 right-4 w-9 h-9 rounded-full bg-white/20 backdrop-blur-md text-white flex items-center justify-center opacity-0 group-hover:opacity-100 transition-opacity duration-300 shadow-md">
+                <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                  <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M21 21l-6-6m2-5a7 7 0 11-14 0 7 7 0 0114 0zM10 7v6m3-3H7"></path>
+                </svg>
+              </div>
+
+              <!-- Column Label Badge -->
+              <div class="absolute top-4 left-4">
+                <span class="px-2.5 py-1 rounded-lg text-[11px] font-bold tracking-wide uppercase bg-sage-700/90 text-white backdrop-blur-sm">
+                  Column 1
+                </span>
+              </div>
+            </div>
+
+            <!-- Figcaption with Specified Caption -->
+            <figcaption class="p-5 sm:p-6 bg-white dark:bg-slateGreen-900 border-t border-sand-200 dark:border-slateGreen-800">
+              <div class="text-xs font-semibold uppercase tracking-wider text-sage-600 dark:text-sage-400 mb-1">
+                Field Documentation
+              </div>
+              <h3 id="gallery-title-1" class="text-base sm:text-lg font-bold text-slateGreen-900 dark:text-sand-100 group-hover:text-sage-700 dark:group-hover:text-sage-300 transition-colors font-display">
+                Ministry Internship Portfolio
+              </h3>
+              <p id="gallery-caption-1" class="text-xs text-slateGreen-600 dark:text-sand-400 mt-1.5 leading-relaxed">
+                Kementerian Kelautan dan Perikanan (KKP RI) • SPIP &amp; PIPK governance, financial reporting &amp; internal control compliance.
+              </p>
+            </figcaption>
+          </figure>
+
+          <!-- Column 2: tt-n.jpg (Caption: E-Commerce & Live Commerce) -->
+          <figure class="reveal-on-scroll group relative rounded-3xl overflow-hidden bg-sand-200 dark:bg-slateGreen-900 border border-sand-300 dark:border-slateGreen-800 shadow-card-calm dark:shadow-card-calm-dark hover-tilt-bounce cursor-pointer" style="transition-delay: 100ms;" onclick="openLightboxFromGallery(2)">
+            <div class="w-full aspect-[3/4] sm:aspect-[4/5] overflow-hidden relative">
+              <img id="gallery-img-2" src="tt-n.jpg" alt="E-Commerce & Live Commerce" class="w-full h-full object-cover object-center group-hover:scale-106 transition-transform duration-700 ease-out" loading="lazy">
+              
+              <!-- Gradient Overlay -->
+              <div class="absolute inset-0 bg-gradient-to-t from-slateGreen-950/85 via-slateGreen-950/35 to-transparent opacity-75 group-hover:opacity-90 transition-opacity"></div>
+              
+              <!-- Zoom Indicator Icon -->
+              <div class="absolute top-4 right-4 w-9 h-9 rounded-full bg-white/20 backdrop-blur-md text-white flex items-center justify-center opacity-0 group-hover:opacity-100 transition-opacity duration-300 shadow-md">
+                <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                  <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M21 21l-6-6m2-5a7 7 0 11-14 0 7 7 0 0114 0zM10 7v6m3-3H7"></path>
+                </svg>
+              </div>
+
+              <!-- Column Label Badge -->
+              <div class="absolute top-4 left-4">
+                <span class="px-2.5 py-1 rounded-lg text-[11px] font-bold tracking-wide uppercase bg-sage-700/90 text-white backdrop-blur-sm">
+                  Column 2
+                </span>
+              </div>
+            </div>
+
+            <!-- Figcaption with Specified Caption -->
+            <figcaption class="p-5 sm:p-6 bg-white dark:bg-slateGreen-900 border-t border-sand-200 dark:border-slateGreen-800">
+              <div class="text-xs font-semibold uppercase tracking-wider text-sage-600 dark:text-sage-400 mb-1">
+                Marketplace Operations
+              </div>
+              <h3 id="gallery-title-2" class="text-base sm:text-lg font-bold text-slateGreen-900 dark:text-sand-100 group-hover:text-sage-700 dark:group-hover:text-sage-300 transition-colors font-display">
+                E-Commerce &amp; Live Commerce
+              </h3>
+              <p id="gallery-caption-2" class="text-xs text-slateGreen-600 dark:text-sand-400 mt-1.5 leading-relaxed">
+                Studio live streaming, TikTok Shop &amp; Shopee campaigns, driving rapid viewer conversion, high ROAS, and customer sales uplift.
+              </p>
+            </figcaption>
+          </figure>
+
+          <!-- Column 3: lk-n.jpg (Caption: Business & Financial Analytics) -->
+          <figure class="reveal-on-scroll group relative rounded-3xl overflow-hidden bg-sand-200 dark:bg-slateGreen-900 border border-sand-300 dark:border-slateGreen-800 shadow-card-calm dark:shadow-card-calm-dark hover-tilt-bounce cursor-pointer" style="transition-delay: 200ms;" onclick="openLightboxFromGallery(3)">
+            <div class="w-full aspect-[3/4] sm:aspect-[4/5] overflow-hidden relative">
+              <img id="gallery-img-3" src="lk-n.jpg" alt="Business & Financial Analytics" class="w-full h-full object-cover object-center group-hover:scale-106 transition-transform duration-700 ease-out" loading="lazy">
+              
+              <!-- Gradient Overlay -->
+              <div class="absolute inset-0 bg-gradient-to-t from-slateGreen-950/85 via-slateGreen-950/35 to-transparent opacity-75 group-hover:opacity-90 transition-opacity"></div>
+              
+              <!-- Zoom Indicator Icon -->
+              <div class="absolute top-4 right-4 w-9 h-9 rounded-full bg-white/20 backdrop-blur-md text-white flex items-center justify-center opacity-0 group-hover:opacity-100 transition-opacity duration-300 shadow-md">
+                <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                  <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M21 21l-6-6m2-5a7 7 0 11-14 0 7 7 0 0114 0zM10 7v6m3-3H7"></path>
+                </svg>
+              </div>
+
+              <!-- Column Label Badge -->
+              <div class="absolute top-4 left-4">
+                <span class="px-2.5 py-1 rounded-lg text-[11px] font-bold tracking-wide uppercase bg-sage-700/90 text-white backdrop-blur-sm">
+                  Column 3
+                </span>
+              </div>
+            </div>
+
+            <!-- Figcaption with Specified Caption -->
+            <figcaption class="p-5 sm:p-6 bg-white dark:bg-slateGreen-900 border-t border-sand-200 dark:border-slateGreen-800">
+              <div class="text-xs font-semibold uppercase tracking-wider text-sage-600 dark:text-sage-400 mb-1">
+                Data &amp; Modeling
+              </div>
+              <h3 id="gallery-title-3" class="text-base sm:text-lg font-bold text-slateGreen-900 dark:text-sand-100 group-hover:text-sage-700 dark:group-hover:text-sage-300 transition-colors font-display">
+                Business &amp; Financial Analytics
+              </h3>
+              <p id="gallery-caption-3" class="text-xs text-slateGreen-600 dark:text-sand-400 mt-1.5 leading-relaxed">
+                Financial verification, internal audit compliance, automated calculation models, and analytical forecasting reviews.
+              </p>
+            </figcaption>
+          </figure>
+
+        </div>
+
+      </div>
+    </section>
+
+    <!-- ======================================================== -->
+    <!-- 5. CERTIFICATIONS SECTION                                -->
+    <!-- Dedicated section displaying certified achievements      -->
+    <!-- 1. TOEFL                                                 -->
+    <!-- 2. Certified Cooperative Manager - BNSP                  -->
+    <!-- 3. National Defense & State Cadre Training - KEMHAN RI   -->
+    <!-- ======================================================== -->
+    <section id="certifications" class="py-16 sm:py-20 border-b border-sand-300 dark:border-slateGreen-800/80 bg-sand-100/60 dark:bg-slateGreen-950">
+      <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+        
+        <!-- Section Header -->
+        <div class="max-w-3xl mb-12 reveal-on-scroll">
+          <div class="flex items-center gap-3 mb-3">
+            <span class="w-8 h-1 bg-sage-500 rounded-full"></span>
+            <span class="text-xs font-bold uppercase tracking-wider text-sage-700 dark:text-sage-400">Certified Credentials</span>
+          </div>
+          <h2 class="text-2xl sm:text-3xl md:text-4xl font-extrabold tracking-tight text-slateGreen-900 dark:text-sand-100 font-display">
+            Certifications
+          </h2>
+          <p class="text-sm sm:text-base text-slateGreen-600 dark:text-sand-400 mt-2">
+            Certified competency standards verifying managerial leadership, international linguistic fluency, and state defense cadre training.
+          </p>
+        </div>
+
+        <!-- 3 Certifications Grid -->
+        <div class="grid grid-cols-1 md:grid-cols-3 gap-6 lg:gap-8">
+          
+          <!-- Certification 1: TOEFL -->
+          <div class="reveal-on-scroll flex flex-col justify-between rounded-3xl bg-white/90 dark:bg-slateGreen-900/85 border border-sand-300 dark:border-slateGreen-800 p-6 sm:p-8 shadow-card-calm dark:shadow-card-calm-dark hover-tilt-bounce group">
+            <div>
+              <div class="flex items-center justify-between gap-4 mb-5">
+                <div class="w-12 h-12 rounded-2xl bg-sage-100 dark:bg-slateGreen-800 text-sage-700 dark:text-sage-300 flex items-center justify-center shrink-0 group-hover:scale-110 transition-transform">
+                  <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 5h12M9 3v2m1.048 9.5A18.022 18.022 0 016.412 9m6.088 9h7M11 21l5-10 5 10m-.188-5h-8.183M10 9a16.87 16.87 0 01-1.69 4.887C7.458 12.06 6.577 10.6 6.07 9h7.93z"></path>
+                  </svg>
+                </div>
+                <span class="inline-flex items-center px-2.5 py-1 rounded-lg text-xs font-bold bg-sage-100 text-sage-800 dark:bg-slateGreen-800 dark:text-sage-300">
+                  Language Proficiency
+                </span>
+              </div>
+
+              <h3 class="text-lg sm:text-xl font-bold text-slateGreen-900 dark:text-sand-100 group-hover:text-sage-700 dark:group-hover:text-sage-300 transition-colors mb-2 font-display">
+                TOEFL - Test of English as a Foreign Language
+              </h3>
+
+              <p class="text-xs sm:text-sm text-slateGreen-600 dark:text-sand-300 leading-relaxed mb-4">
+                Standardized international language proficiency examination assessing English listening comprehension, grammatical structure, and written academic expression.
+              </p>
+            </div>
+
+            <div class="pt-4 border-t border-sand-200 dark:border-slateGreen-800/80 flex items-center justify-between text-xs text-slateGreen-600 dark:text-sand-400">
+              <span class="font-medium">International Standard</span>
+              <span class="inline-flex items-center gap-1 text-sage-700 dark:text-sage-300 font-bold">
+                <svg class="w-3.5 h-3.5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2.5" d="M5 13l4 4L19 7"></path></svg>
+                <span>Certified</span>
+              </span>
+            </div>
+          </div>
+
+          <!-- Certification 2: Certified Cooperative Manager - BNSP -->
+          <div class="reveal-on-scroll flex flex-col justify-between rounded-3xl bg-white/90 dark:bg-slateGreen-900/85 border border-sand-300 dark:border-slateGreen-800 p-6 sm:p-8 shadow-card-calm dark:shadow-card-calm-dark hover-tilt-bounce group" style="transition-delay: 100ms;">
+            <div>
+              <div class="flex items-center justify-between gap-4 mb-5">
+                <div class="w-12 h-12 rounded-2xl bg-sage-100 dark:bg-slateGreen-800 text-sage-700 dark:text-sage-300 flex items-center justify-center shrink-0 group-hover:scale-110 transition-transform">
+                  <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12l2 2 4-4m5.618-4.016A11.955 11.955 0 0112 2.944a11.955 11.955 0 01-8.618 3.04A12.02 12.02 0 003 9c0 5.591 3.824 10.29 9 11.622 5.176-1.332 9-6.03 9-11.622 0-1.042-.133-2.052-.382-3.016z"></path>
+                  </svg>
+                </div>
+                <span class="inline-flex items-center px-2.5 py-1 rounded-lg text-xs font-bold bg-sage-100 text-sage-800 dark:bg-slateGreen-800 dark:text-sage-300">
+                  National Certification
+                </span>
+              </div>
+
+              <h3 class="text-lg sm:text-xl font-bold text-slateGreen-900 dark:text-sand-100 group-hover:text-sage-700 dark:group-hover:text-sage-300 transition-colors mb-2 font-display">
+                Certified Cooperative Manager
+              </h3>
+
+              <div class="text-xs font-bold text-sage-700 dark:text-sage-400 mb-2">
+                BNSP (Badan Nasional Sertifikasi Profesi)
+              </div>
+
+              <p class="text-xs sm:text-sm text-slateGreen-600 dark:text-sand-300 leading-relaxed mb-4">
+                National professional managerial competency standard covering organizational governance, financial management, compliance supervision, and enterprise operations.
+              </p>
+            </div>
+
+            <div class="pt-4 border-t border-sand-200 dark:border-slateGreen-800/80 flex items-center justify-between text-xs text-slateGreen-600 dark:text-sand-400">
+              <span class="font-medium">BNSP Accredited</span>
+              <span class="inline-flex items-center gap-1 text-sage-700 dark:text-sage-300 font-bold">
+                <svg class="w-3.5 h-3.5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2.5" d="M5 13l4 4L19 7"></path></svg>
+                <span>Accredited</span>
+              </span>
+            </div>
+          </div>
+
+          <!-- Certification 3: National Defense & State Cadre Training - KEMHAN RI -->
+          <div class="reveal-on-scroll flex flex-col justify-between rounded-3xl bg-white/90 dark:bg-slateGreen-900/85 border border-sand-300 dark:border-slateGreen-800 p-6 sm:p-8 shadow-card-calm dark:shadow-card-calm-dark hover-tilt-bounce group" style="transition-delay: 200ms;">
+            <div>
+              <div class="flex items-center justify-between gap-4 mb-5">
+                <div class="w-12 h-12 rounded-2xl bg-terracotta-100 dark:bg-slateGreen-800 text-terracotta-700 dark:text-terracotta-300 flex items-center justify-center shrink-0 group-hover:scale-110 transition-transform">
+                  <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 8v13m0-13V6a2 2 0 112 2h-2zm0 0V5.5A2.5 2.5 0 109.5 8H12zm-7 4h14M5 12a2 2 0 110-4h14a2 2 0 110 4M5 12v7a2 2 0 002 2h10a2 2 0 002-2v-7"></path>
+                  </svg>
+                </div>
+                <span class="inline-flex items-center px-2.5 py-1 rounded-lg text-xs font-bold bg-terracotta-100 text-terracotta-700 dark:bg-slateGreen-800 dark:text-terracotta-300">
+                  National Leadership
+                </span>
+              </div>
+
+              <h3 class="text-lg sm:text-xl font-bold text-slateGreen-900 dark:text-sand-100 group-hover:text-sage-700 dark:group-hover:text-sage-300 transition-colors mb-2 font-display">
+                National Defense &amp; State Cadre Training (Bela Negara)
+              </h3>
+
+              <div class="text-xs font-bold text-terracotta-600 dark:text-terracotta-400 mb-2">
+                Ministry of Defense Republic of Indonesia (KEMHAN RI)
+              </div>
+
+              <p class="text-xs sm:text-sm text-slateGreen-600 dark:text-sand-300 leading-relaxed mb-4">
+                Official cadre program on national civic duty, institutional integrity, crisis leadership, teamwork, and strategic state defense discipline certified by KEMHAN RI.
+              </p>
+            </div>
+
+            <div class="pt-4 border-t border-sand-200 dark:border-slateGreen-800/80 flex items-center justify-between text-xs text-slateGreen-600 dark:text-sand-400">
+              <span class="font-medium">KEMHAN RI Certified</span>
+              <span class="inline-flex items-center gap-1 text-sage-700 dark:text-sage-300 font-bold">
+                <svg class="w-3.5 h-3.5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2.5" d="M5 13l4 4L19 7"></path></svg>
+                <span>Certified Cadre</span>
+              </span>
+            </div>
+          </div>
+
+        </div>
+
+      </div>
+    </section>
+
+    <!-- ======================================================== -->
+    <!-- 6. PROFESSIONAL AND TECHNICAL SKILLS & LANGUAGES         -->
+    <!-- Placed BEFORE Example Projects                           -->
+    <!-- Displayed using aesthetic pills/badges with hover        -->
+    <!-- ======================================================== -->
+    <section id="skills" class="py-16 sm:py-20 border-b border-sand-300 dark:border-slateGreen-800/80 bg-white/70 dark:bg-slateGreen-950/50">
+      <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+        
+        <!-- Section Header -->
+        <div class="max-w-3xl mb-12 reveal-on-scroll">
+          <div class="flex items-center gap-3 mb-3">
+            <span class="w-8 h-1 bg-sage-500 rounded-full"></span>
+            <span class="text-xs font-bold uppercase tracking-wider text-sage-700 dark:text-sage-400">Core Capabilities</span>
+          </div>
+          <h2 class="text-2xl sm:text-3xl md:text-4xl font-extrabold tracking-tight text-slateGreen-900 dark:text-sand-100 font-display">
+            Professional &amp; Technical Skills &amp; Languages
+          </h2>
+          <p class="text-sm sm:text-base text-slateGreen-600 dark:text-sand-400 mt-2">
+            Multi-disciplinary competencies across corporate finance governance, digital marketplace tools, advanced spreadsheet modeling, and fluent bilingual communication.
+          </p>
+        </div>
+
+        <!-- 3-Column Categorized Cards Grid -->
+        <div class="grid grid-cols-1 lg:grid-cols-3 gap-8">
+          
+          <!-- Category 1: Professional Skills -->
+          <div class="reveal-on-scroll rounded-3xl bg-sand-100/90 dark:bg-slateGreen-900/85 border border-sand-300 dark:border-slateGreen-800 p-6 sm:p-8 shadow-card-calm dark:shadow-card-calm-dark flex flex-col justify-between hover-tilt-bounce">
+            <div>
+              <div class="flex items-center gap-3.5 pb-4 mb-6 border-b border-sand-300 dark:border-slateGreen-800">
+                <div class="w-10 h-10 rounded-xl bg-sage-200 dark:bg-slateGreen-800 text-sage-800 dark:text-sage-200 flex items-center justify-center shrink-0">
+                  <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12l2 2 4-4M7.835 4.697a3.42 3.42 0 001.946-.806 3.42 3.42 0 014.438 0 3.42 3.42 0 001.946.806 3.42 3.42 0 013.138 3.138 3.42 3.42 0 00.806 1.946 3.42 3.42 0 010 4.438 3.42 3.42 0 00-.806 1.946 3.42 3.42 0 01-3.138 3.138 3.42 3.42 0 00-1.946.806 3.42 3.42 0 01-4.438 0 3.42 3.42 0 00-1.946-.806 3.42 3.42 0 01-3.138-3.138 3.42 3.42 0 00-.806-1.946 3.42 3.42 0 010-4.438 3.42 3.42 0 00.806-1.946 3.42 3.42 0 013.138-3.138z"></path>
+                  </svg>
+                </div>
+                <div>
+                  <h3 class="text-lg font-bold text-slateGreen-900 dark:text-sand-100 font-display">Professional Skills</h3>
+                  <p class="text-xs text-slateGreen-600 dark:text-sand-400">Finance &amp; Operations Mastery</p>
+                </div>
+              </div>
+
+              <!-- Skills List with Aesthetic Badges -->
+              <div class="space-y-4">
+                
+                <!-- Finance -->
+                <div class="p-4 rounded-2xl bg-white/90 dark:bg-slateGreen-800/80 border border-sand-300 dark:border-slateGreen-700">
+                  <div class="flex items-center justify-between mb-2">
+                    <span class="text-xs font-bold uppercase tracking-wider text-sage-700 dark:text-sage-300">Finance</span>
+                    <span class="text-[10px] font-bold px-2 py-0.5 rounded-full bg-sage-100 dark:bg-slateGreen-700 text-sage-800 dark:text-sand-200">Core Major</span>
+                  </div>
+                  <div class="flex flex-wrap gap-1.5">
+                    <span class="px-2.5 py-1 rounded-xl text-xs font-medium bg-sand-100 dark:bg-slateGreen-900 text-slateGreen-800 dark:text-sand-200 hover:bg-sage-100 hover:text-sage-800 transition-colors">Financial Management</span>
+                    <span class="px-2.5 py-1 rounded-xl text-xs font-medium bg-sand-100 dark:bg-slateGreen-900 text-slateGreen-800 dark:text-sand-200 hover:bg-sage-100 hover:text-sage-800 transition-colors">Financial Planning</span>
+                    <span class="px-2.5 py-1 rounded-xl text-xs font-medium bg-sand-100 dark:bg-slateGreen-900 text-slateGreen-800 dark:text-sand-200 hover:bg-sage-100 hover:text-sage-800 transition-colors">Tax and Payroll</span>
+                  </div>
+                </div>
+
+                <!-- Risk Management -->
+                <div class="p-4 rounded-2xl bg-white/90 dark:bg-slateGreen-800/80 border border-sand-300 dark:border-slateGreen-700">
+                  <div class="flex items-center justify-between mb-2">
+                    <span class="text-xs font-bold uppercase tracking-wider text-slateGreen-700 dark:text-sand-300">Risk Management</span>
+                    <span class="text-[10px] font-bold px-2 py-0.5 rounded-full bg-sand-200 dark:bg-slateGreen-700 text-slateGreen-800 dark:text-sand-200">SPIP / PIPK</span>
+                  </div>
+                  <div class="flex flex-wrap gap-1.5">
+                    <span class="px-2.5 py-1 rounded-xl text-xs font-medium bg-sand-100 dark:bg-slateGreen-900 text-slateGreen-800 dark:text-sand-200 hover:bg-sage-100 hover:text-sage-800 transition-colors">Internal Control Systems</span>
+                    <span class="px-2.5 py-1 rounded-xl text-xs font-medium bg-sand-100 dark:bg-slateGreen-900 text-slateGreen-800 dark:text-sand-200 hover:bg-sage-100 hover:text-sage-800 transition-colors">Organizational Risk Assessment</span>
+                  </div>
+                </div>
+
+                <!-- Marketing -->
+                <div class="p-4 rounded-2xl bg-white/90 dark:bg-slateGreen-800/80 border border-sand-300 dark:border-slateGreen-700">
+                  <div class="flex items-center justify-between mb-2">
+                    <span class="text-xs font-bold uppercase tracking-wider text-terracotta-600 dark:text-terracotta-400">Marketing</span>
+                    <span class="text-[10px] font-bold px-2 py-0.5 rounded-full bg-terracotta-100 dark:bg-slateGreen-700 text-terracotta-700 dark:text-sand-200">Growth Focus</span>
+                  </div>
+                  <div class="flex flex-wrap gap-1.5">
+                    <span class="px-2.5 py-1 rounded-xl text-xs font-medium bg-sand-100 dark:bg-slateGreen-900 text-slateGreen-800 dark:text-sand-200 hover:bg-terracotta-100 hover:text-terracotta-800 transition-colors">Marketing Strategies</span>
+                    <span class="px-2.5 py-1 rounded-xl text-xs font-medium bg-sand-100 dark:bg-slateGreen-900 text-slateGreen-800 dark:text-sand-200 hover:bg-terracotta-100 hover:text-terracotta-800 transition-colors">Marketing Analysis</span>
+                  </div>
+                </div>
+
+                <!-- E-Commerce Operations Specialist -->
+                <div class="p-4 rounded-2xl bg-white/90 dark:bg-slateGreen-800/80 border border-sand-300 dark:border-slateGreen-700">
+                  <div class="flex items-center justify-between mb-2">
+                    <span class="text-xs font-bold uppercase tracking-wider text-sage-700 dark:text-sage-300">E-Commerce Operations</span>
+                    <span class="text-[10px] font-bold px-2 py-0.5 rounded-full bg-sage-100 dark:bg-slateGreen-700 text-sage-800 dark:text-sand-200">Specialist</span>
+                  </div>
+                  <div class="flex flex-wrap gap-1.5">
+                    <span class="px-2.5 py-1 rounded-xl text-xs font-medium bg-sand-100 dark:bg-slateGreen-900 text-slateGreen-800 dark:text-sand-200 hover:bg-sage-100 hover:text-sage-800 transition-colors">E-Commerce Operations Specialist</span>
+                    <span class="px-2.5 py-1 rounded-xl text-xs font-medium bg-sand-100 dark:bg-slateGreen-900 text-slateGreen-800 dark:text-sand-200 hover:bg-sage-100 hover:text-sage-800 transition-colors">Shopee &amp; TikTok Shop</span>
+                    <span class="px-2.5 py-1 rounded-xl text-xs font-medium bg-sand-100 dark:bg-slateGreen-900 text-slateGreen-800 dark:text-sand-200 hover:bg-sage-100 hover:text-sage-800 transition-colors">BigSeller Integration</span>
+                  </div>
+                </div>
+
+              </div>
+            </div>
+
+            <div class="mt-6 pt-4 border-t border-sand-300 dark:border-slateGreen-800 text-[11px] text-slateGreen-600 dark:text-sand-400 flex items-center gap-2">
+              <span class="w-2 h-2 rounded-full bg-sage-500"></span>
+              <span>4 Core Professional Disciplines</span>
+            </div>
+          </div>
+
+          <!-- Category 2: Technical Skills -->
+          <div class="reveal-on-scroll rounded-3xl bg-sand-100/90 dark:bg-slateGreen-900/85 border border-sand-300 dark:border-slateGreen-800 p-6 sm:p-8 shadow-card-calm dark:shadow-card-calm-dark flex flex-col justify-between hover-tilt-bounce" style="transition-delay: 100ms;">
+            <div>
+              <div class="flex items-center gap-3.5 pb-4 mb-6 border-b border-sand-300 dark:border-slateGreen-800">
+                <div class="w-10 h-10 rounded-xl bg-sage-200 dark:bg-slateGreen-800 text-sage-800 dark:text-sage-200 flex items-center justify-center shrink-0">
+                  <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9.75 17L9 20l-1 1h8l-1-1-.75-3M3 13h18M5 17h14a2 2 0 002-2V5a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z"></path>
+                  </svg>
+                </div>
+                <div>
+                  <h3 class="text-lg font-bold text-slateGreen-900 dark:text-sand-100 font-display">Technical Skills</h3>
+                  <p class="text-xs text-slateGreen-600 dark:text-sand-400">Software &amp; Analytical Tooling</p>
+                </div>
+              </div>
+
+              <!-- Technical Items Stack -->
+              <div class="space-y-3.5">
+                
+                <!-- Microsoft Excel (with highlighted formula pills) -->
+                <div class="p-4 rounded-2xl bg-white/90 dark:bg-slateGreen-800/80 border border-sage-300 dark:border-sage-600/40 shadow-sm">
+                  <div class="flex items-center justify-between mb-2">
+                    <span class="text-xs font-bold text-slateGreen-900 dark:text-sand-100 flex items-center gap-1.5">
+                      <span class="w-2 h-2 rounded-full bg-sage-500"></span>
+                      Microsoft Excel
+                    </span>
+                    <span class="text-[10px] uppercase font-bold tracking-wider px-2 py-0.5 rounded-full bg-sage-100 text-sage-800 dark:bg-slateGreen-700 dark:text-sage-200">
+                      Advanced
+                    </span>
+                  </div>
+                  <p class="text-xs text-slateGreen-600 dark:text-sand-300 mb-2.5">
+                    Advanced calculation formulas &amp; modeling:
+                  </p>
+                  <div class="flex flex-wrap gap-1.5">
+                    <span class="px-2.5 py-1 rounded-xl text-xs font-bold font-mono bg-sage-100 dark:bg-slateGreen-900 text-sage-800 dark:text-sage-200 hover:scale-105 transition-transform">VLOOKUP</span>
+                    <span class="px-2.5 py-1 rounded-xl text-xs font-bold font-mono bg-sage-100 dark:bg-slateGreen-900 text-sage-800 dark:text-sage-200 hover:scale-105 transition-transform">HLOOKUP</span>
+                    <span class="px-2.5 py-1 rounded-xl text-xs font-bold font-mono bg-sage-100 dark:bg-slateGreen-900 text-sage-800 dark:text-sage-200 hover:scale-105 transition-transform">XLOOKUP</span>
+                    <span class="px-2.5 py-1 rounded-xl text-xs font-bold font-mono bg-sage-100 dark:bg-slateGreen-900 text-sage-800 dark:text-sage-200 hover:scale-105 transition-transform">PIVOT</span>
+                    <span class="px-2.5 py-1 rounded-xl text-xs font-bold font-mono bg-sage-100 dark:bg-slateGreen-900 text-sage-800 dark:text-sage-200 hover:scale-105 transition-transform">AUTOCRAD</span>
+                  </div>
+                </div>
+
+                <!-- Microsoft Word -->
+                <div class="p-3.5 rounded-2xl bg-white/90 dark:bg-slateGreen-800/80 border border-sand-300 dark:border-slateGreen-700 flex items-center justify-between">
+                  <div class="flex items-center gap-2.5">
+                    <span class="w-8 h-8 rounded-xl bg-sage-100 text-sage-800 dark:bg-slateGreen-700 dark:text-sand-200 flex items-center justify-center font-bold text-xs">W</span>
+                    <span class="text-xs sm:text-sm font-semibold text-slateGreen-900 dark:text-sand-100">Microsoft Word</span>
+                  </div>
+                  <span class="text-xs text-slateGreen-600 dark:text-sand-400">Official Reports &amp; SPIP</span>
+                </div>
+
+                <!-- Microsoft PowerPoint -->
+                <div class="p-3.5 rounded-2xl bg-white/90 dark:bg-slateGreen-800/80 border border-sand-300 dark:border-slateGreen-700 flex items-center justify-between">
+                  <div class="flex items-center gap-2.5">
+                    <span class="w-8 h-8 rounded-xl bg-terracotta-100 text-terracotta-700 dark:bg-slateGreen-700 dark:text-sand-200 flex items-center justify-center font-bold text-xs">P</span>
+                    <span class="text-xs sm:text-sm font-semibold text-slateGreen-900 dark:text-sand-100">Microsoft Power Point</span>
+                  </div>
+                  <span class="text-xs text-slateGreen-600 dark:text-sand-400">Executive Presentations</span>
+                </div>
+
+                <!-- Google Workspace -->
+                <div class="p-3.5 rounded-2xl bg-white/90 dark:bg-slateGreen-800/80 border border-sand-300 dark:border-slateGreen-700 flex items-center justify-between">
+                  <div>
+                    <span class="block text-xs sm:text-sm font-semibold text-slateGreen-900 dark:text-sand-100">Google Workspace</span>
+                    <span class="text-[11px] text-slateGreen-600 dark:text-sand-400">Docs, Spreadsheet, Sites</span>
+                  </div>
+                  <span class="text-xs px-2.5 py-1 rounded-lg bg-sand-200 dark:bg-slateGreen-700 text-slateGreen-800 dark:text-sand-200 font-medium">Cloud Collab</span>
+                </div>
+
+                <!-- Adobe & Canva -->
+                <div class="p-3.5 rounded-2xl bg-white/90 dark:bg-slateGreen-800/80 border border-sand-300 dark:border-slateGreen-700 flex items-center justify-between">
+                  <span class="text-xs sm:text-sm font-semibold text-slateGreen-900 dark:text-sand-100">Adobe &amp; Canva</span>
+                  <span class="text-xs text-slateGreen-600 dark:text-sand-400">Commercial Storefront Creatives</span>
+                </div>
+
+              </div>
+            </div>
+
+            <div class="mt-6 pt-4 border-t border-sand-300 dark:border-slateGreen-800 text-[11px] text-slateGreen-600 dark:text-sand-400 flex items-center gap-2">
+              <span class="w-2 h-2 rounded-full bg-sage-500"></span>
+              <span>Complete Data &amp; Design Workflow</span>
+            </div>
+          </div>
+
+          <!-- Category 3: Languages -->
+          <div class="reveal-on-scroll rounded-3xl bg-sand-100/90 dark:bg-slateGreen-900/85 border border-sand-300 dark:border-slateGreen-800 p-6 sm:p-8 shadow-card-calm dark:shadow-card-calm-dark flex flex-col justify-between hover-tilt-bounce" style="transition-delay: 200ms;">
+            <div>
+              <div class="flex items-center gap-3.5 pb-4 mb-6 border-b border-sand-300 dark:border-slateGreen-800">
+                <div class="w-10 h-10 rounded-xl bg-sage-200 dark:bg-slateGreen-800 text-sage-800 dark:text-sage-200 flex items-center justify-center shrink-0">
+                  <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M21 12a9 9 0 01-9 9m9-9a9 9 0 00-9-9m9 9H3m9 9a9 9 0 01-9-9m9 9c1.657 0 3-4.03 3-9s-1.343-9-3-9m0 18c-1.657 0-3-4.03-3-9s1.343-9 3-9m-9 9a9 9 0 019-9"></path>
+                  </svg>
+                </div>
+                <div>
+                  <h3 class="text-lg font-bold text-slateGreen-900 dark:text-sand-100 font-display">Languages</h3>
+                  <p class="text-xs text-slateGreen-600 dark:text-sand-400">Communication &amp; Fluency</p>
+                </div>
+              </div>
+
+              <!-- Language Cards with Proficiency Indicators -->
+              <div class="space-y-4">
+                
+                <!-- Indonesian (Native) -->
+                <div class="p-4 rounded-2xl bg-white/90 dark:bg-slateGreen-800/80 border border-sand-300 dark:border-slateGreen-700">
+                  <div class="flex items-center justify-between mb-2">
+                    <div class="flex items-center gap-2">
+                      <span class="w-3 h-3 rounded-full bg-sage-600"></span>
+                      <span class="text-sm font-bold text-slateGreen-900 dark:text-sand-100 font-display">Indonesian</span>
+                    </div>
+                    <span class="px-2.5 py-0.5 rounded-full text-xs font-bold bg-sage-100 text-sage-800 dark:bg-slateGreen-700 dark:text-sage-200">
+                      Native
+                    </span>
+                  </div>
+                  <p class="text-xs text-slateGreen-600 dark:text-sand-400 mb-2.5">
+                    Native language, full mastery in formal public-sector governance and executive correspondence.
+                  </p>
+                  <!-- Visual Progress Bar -->
+                  <div class="w-full bg-sand-200 dark:bg-slateGreen-700 h-2 rounded-full overflow-hidden">
+                    <div class="bg-sage-600 dark:bg-sage-400 h-full rounded-full w-full"></div>
+                  </div>
+                </div>
+
+                <!-- English (Professional Working Proficiency) -->
+                <div class="p-4 rounded-2xl bg-white/90 dark:bg-slateGreen-800/80 border border-sand-300 dark:border-slateGreen-700">
+                  <div class="flex items-center justify-between mb-2">
+                    <div class="flex items-center gap-2">
+                      <span class="w-3 h-3 rounded-full bg-terracotta-500"></span>
+                      <span class="text-sm font-bold text-slateGreen-900 dark:text-sand-100 font-display">English</span>
+                    </div>
+                    <span class="px-2.5 py-0.5 rounded-full text-xs font-bold bg-terracotta-100 text-terracotta-700 dark:bg-slateGreen-700 dark:text-terracotta-300">
+                      Professional Working Proficiency
+                    </span>
+                  </div>
+                  <p class="text-xs text-slateGreen-600 dark:text-sand-400 mb-2.5">
+                    Professional Working Proficiency (TOEFL Certified) for cross-border e-commerce, negotiations &amp; financial analytics.
+                  </p>
+                  <!-- Visual Progress Bar -->
+                  <div class="w-full bg-sand-200 dark:bg-slateGreen-700 h-2 rounded-full overflow-hidden">
+                    <div class="bg-gradient-to-r from-sage-500 to-terracotta-500 h-full rounded-full w-[88%]"></div>
+                  </div>
+                </div>
+
+                <!-- Bilingual Advantage Banner -->
+                <div class="p-4 rounded-2xl bg-sage-50/80 dark:bg-slateGreen-800/50 border border-sage-200 dark:border-slateGreen-700 text-xs text-slateGreen-800 dark:text-sand-300">
+                  <div class="font-bold text-sage-800 dark:text-sage-300 mb-1">Global &amp; National Ready</div>
+                  Seamless communication bridging government reporting standards and multi-platform omnichannel commerce.
+                </div>
+
+              </div>
+            </div>
+
+            <div class="mt-6 pt-4 border-t border-sand-300 dark:border-slateGreen-800 text-[11px] text-slateGreen-600 dark:text-sand-400 flex items-center gap-2">
+              <span class="w-2 h-2 rounded-full bg-sage-500"></span>
+              <span>Indonesian (Native) • English (Professional Working)</span>
+            </div>
+          </div>
+
+        </div>
+
+      </div>
+    </section>
+
+    <!-- ======================================================== -->
+    <!-- 7. EXAMPLE PROJECTS SECTION                              -->
+    <!-- Card 1: Ex. Project Formula -> Project 1.xlsx            -->
+    <!-- Card 2: Dashboard Analyst -> Dashboard Project.xlsx       -->
+    <!-- ======================================================== -->
+    <section id="projects" class="py-16 sm:py-20 border-b border-sand-300 dark:border-slateGreen-800/80 bg-sand-100/60 dark:bg-slateGreen-950">
+      <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+        
+        <!-- Section Header -->
+        <div class="max-w-3xl mb-12 reveal-on-scroll">
+          <div class="flex items-center gap-3 mb-3">
+            <span class="w-8 h-1 bg-sage-500 rounded-full"></span>
+            <span class="text-xs font-bold uppercase tracking-wider text-sage-700 dark:text-sage-400">Spreadsheet &amp; Data Models</span>
+          </div>
+          <h2 class="text-2xl sm:text-3xl md:text-4xl font-extrabold tracking-tight text-slateGreen-900 dark:text-sand-100 font-display">
+            Example Projects
+          </h2>
+          <p class="text-sm sm:text-base text-slateGreen-600 dark:text-sand-400 mt-2">
+            Explore and download interactive Microsoft Excel financial calculation workbooks, dynamic business intelligence dashboards, and analytical models.
+          </p>
+        </div>
+
+        <!-- Two Column Projects Grid -->
+        <div class="grid grid-cols-1 lg:grid-cols-2 gap-8">
+
+          <!-- Card 1: Ex. Project Formula -> Project 1.xlsx -->
+          <div class="reveal-on-scroll flex flex-col justify-between rounded-3xl bg-white/95 dark:bg-slateGreen-900/90 border border-sand-300 dark:border-slateGreen-800 p-7 sm:p-9 shadow-card-calm dark:shadow-card-calm-dark hover-tilt-bounce group">
+            <div>
+              <div class="flex items-center justify-between gap-4 mb-6">
+                <div class="w-12 h-12 rounded-2xl bg-sage-100 dark:bg-slateGreen-800 text-sage-700 dark:text-sage-300 flex items-center justify-center shrink-0 group-hover:scale-110 transition-transform">
+                  <!-- Excel Spreadsheet Icon -->
+                  <svg class="w-6 h-6" fill="currentColor" viewBox="0 0 24 24">
+                    <path d="M14 2H6c-1.1 0-1.99.9-1.99 2L4 20c0 1.1.89 2 1.99 2H18c1.1 0 2-.9 2-2V8l-6-6zm2 16H8v-2h8v2zm0-4H8v-2h8v2zm-3-5V3.5L18.5 9H13z"/>
+                  </svg>
+                </div>
+                <span class="inline-flex items-center px-3 py-1 rounded-lg text-xs font-bold bg-sage-100 text-sage-800 dark:bg-slateGreen-800 dark:text-sage-300">
+                  Microsoft Excel (.xlsx)
+                </span>
+              </div>
+
+              <!-- Exact Title from prompt -->
+              <h3 class="text-xl sm:text-2xl font-bold text-slateGreen-900 dark:text-sand-100 group-hover:text-sage-700 dark:group-hover:text-sage-300 transition-colors mb-3 font-display">
+                Ex. Project Formula
+              </h3>
+
+              <!-- Exact Description from prompt -->
+              <p class="text-sm sm:text-base text-slateGreen-600 dark:text-sand-300 leading-relaxed mb-6">
+                Advanced financial formulas, spreadsheet modeling, and automated data calculations.
+              </p>
+
+              <!-- Competencies / Tags -->
+              <div class="flex flex-wrap gap-2 mb-8">
+                <span class="text-xs px-3 py-1 rounded-xl bg-sand-200 dark:bg-slateGreen-800 text-slateGreen-800 dark:text-sand-300 font-medium">Financial Formulas</span>
+                <span class="text-xs px-3 py-1 rounded-xl bg-sand-200 dark:bg-slateGreen-800 text-slateGreen-800 dark:text-sand-300 font-medium">Spreadsheet Modeling</span>
+                <span class="text-xs px-3 py-1 rounded-xl bg-sand-200 dark:bg-slateGreen-800 text-slateGreen-800 dark:text-sand-300 font-medium">Automated Calculations</span>
+                <span class="text-xs px-3 py-1 rounded-xl bg-sand-200 dark:bg-slateGreen-800 text-slateGreen-800 dark:text-sand-300 font-medium">VLOOKUP / XLOOKUP</span>
+              </div>
+            </div>
+
+            <!-- Download Button Linking to "Project 1.xlsx" -->
+            <div class="pt-5 border-t border-sand-200 dark:border-slateGreen-800 flex flex-wrap items-center justify-between gap-3">
+              <span id="project-1-filename" class="text-xs text-slateGreen-500 dark:text-sand-400">File: Project 1.xlsx</span>
+              <a id="project-1-btn" href="Project 1.xlsx" download="Project 1.xlsx" onclick="notifyDownload(this.getAttribute('download'))" class="inline-flex items-center gap-2 px-5 py-2.5 rounded-xl text-xs sm:text-sm font-bold uppercase tracking-wider text-white bg-slateGreen-800 hover:bg-slateGreen-700 dark:bg-sage-600 dark:hover:bg-sage-500 shadow-md hover:shadow-glow-sage transition-all transform hover:-translate-y-0.5">
+                <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                  <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 16v1a3 3 0 003 3h10a3 3 0 003-3v-1m-4-4l-4 4m0 0l-4-4m4 4V4"></path>
+                </svg>
+                <span>Download Project 1</span>
+              </a>
+            </div>
+          </div>
+
+          <!-- Card 2: Dashboard Analyst -> Dashboard Project.xlsx -->
+          <div class="reveal-on-scroll flex flex-col justify-between rounded-3xl bg-white/95 dark:bg-slateGreen-900/90 border border-sand-300 dark:border-slateGreen-800 p-7 sm:p-9 shadow-card-calm dark:shadow-card-calm-dark hover-tilt-bounce group" style="transition-delay: 100ms;">
+            <div>
+              <div class="flex items-center justify-between gap-4 mb-6">
+                <div class="w-12 h-12 rounded-2xl bg-terracotta-100 dark:bg-slateGreen-800 text-terracotta-700 dark:text-terracotta-300 flex items-center justify-center shrink-0 group-hover:scale-110 transition-transform">
+                  <!-- Analytics Dashboard Icon -->
+                  <svg class="w-6 h-6" fill="currentColor" viewBox="0 0 24 24">
+                    <path d="M19 3H5c-1.1 0-2 .9-2 2v14c0 1.1.9 2 2 2h14c1.1 0 2-.9 2-2V5c0-1.1-.9-2-2-2zM9 17H7v-7h2v7zm4 0h-2V7h2v10zm4 0h-2v-4h2v4z"/>
+                  </svg>
+                </div>
+                <span class="inline-flex items-center px-3 py-1 rounded-lg text-xs font-bold bg-terracotta-100 text-terracotta-700 dark:bg-slateGreen-800 dark:text-terracotta-300">
+                  Microsoft Excel (.xlsx)
+                </span>
+              </div>
+
+              <!-- Exact Title from prompt -->
+              <h3 class="text-xl sm:text-2xl font-bold text-slateGreen-900 dark:text-sand-100 group-hover:text-sage-700 dark:group-hover:text-sage-300 transition-colors mb-3 font-display">
+                Dashboard Analyst
+              </h3>
+
+              <!-- Exact Description from prompt -->
+              <p class="text-sm sm:text-base text-slateGreen-600 dark:text-sand-300 leading-relaxed mb-6">
+                Dynamic business analytics dashboard for interactive data visualization and decision support.
+              </p>
+
+              <!-- Competencies / Tags -->
+              <div class="flex flex-wrap gap-2 mb-8">
+                <span class="text-xs px-3 py-1 rounded-xl bg-sand-200 dark:bg-slateGreen-800 text-slateGreen-800 dark:text-sand-300 font-medium">Interactive Dashboard</span>
+                <span class="text-xs px-3 py-1 rounded-xl bg-sand-200 dark:bg-slateGreen-800 text-slateGreen-800 dark:text-sand-300 font-medium">Data Visualization</span>
+                <span class="text-xs px-3 py-1 rounded-xl bg-sand-200 dark:bg-slateGreen-800 text-slateGreen-800 dark:text-sand-300 font-medium">Decision Support</span>
+                <span class="text-xs px-3 py-1 rounded-xl bg-sand-200 dark:bg-slateGreen-800 text-slateGreen-800 dark:text-sand-300 font-medium">Pivot Tables &amp; Charts</span>
+              </div>
+            </div>
+
+            <!-- Download Button Linking to "Dashboard Project.xlsx" -->
+            <div class="pt-5 border-t border-sand-200 dark:border-slateGreen-800 flex flex-wrap items-center justify-between gap-3">
+              <span id="project-2-filename" class="text-xs text-slateGreen-500 dark:text-sand-400">File: Dashboard Project.xlsx</span>
+              <a id="project-2-btn" href="Dashboard Project.xlsx" download="Dashboard Project.xlsx" onclick="notifyDownload(this.getAttribute('download'))" class="inline-flex items-center gap-2 px-5 py-2.5 rounded-xl text-xs sm:text-sm font-bold uppercase tracking-wider text-white bg-slateGreen-800 hover:bg-slateGreen-700 dark:bg-sage-600 dark:hover:bg-sage-500 shadow-md hover:shadow-glow-sage transition-all transform hover:-translate-y-0.5">
+                <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                  <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 16v1a3 3 0 003 3h10a3 3 0 003-3v-1m-4-4l-4 4m0 0l-4-4m4 4V4"></path>
+                </svg>
+                <span>Download Dashboard</span>
+              </a>
+            </div>
+          </div>
+
+        </div>
+
+      </div>
+    </section>
+
+    <!-- ======================================================== -->
+    <!-- 8. DOWNLOAD CV SECTION                                   -->
+    <!-- Highlighted calm-toned banner with prominent button      -->
+    <!-- for "CV-Fernando Ilham Pate Gheta 2026.pdf"               -->
+    <!-- ======================================================== -->
+    <section id="download-cv" class="py-16 sm:py-24 relative overflow-hidden bg-slateGreen-900 text-white">
+      
+      <!-- Gentle Ambient Background Accents -->
+      <div class="absolute -top-28 -right-28 w-96 h-96 bg-sage-500/20 rounded-full blur-3xl pointer-events-none"></div>
+      <div class="absolute -bottom-28 -left-28 w-96 h-96 bg-terracotta-500/15 rounded-full blur-3xl pointer-events-none"></div>
+
+      <div class="max-w-5xl mx-auto px-4 sm:px-6 lg:px-8 relative">
+        <div class="reveal-on-scroll rounded-[2.5rem] p-8 sm:p-12 md:p-16 bg-white/5 border border-white/10 backdrop-blur-xl shadow-2xl relative overflow-hidden">
+          
+          <div class="grid grid-cols-1 md:grid-cols-12 gap-8 items-center">
+            
+            <!-- Left Info Content -->
+            <div class="md:col-span-8 space-y-4">
+              <div class="inline-flex items-center gap-2 px-3.5 py-1.5 rounded-full text-xs font-semibold bg-sage-500/20 text-sage-300 border border-sage-500/30">
+                <svg class="w-3.5 h-3.5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                  <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12h6m-6 4h6m2 5H7a2 2 0 01-2-2V5a2 2 0 012-2h5.586a1 1 0 01.707.293l5.414 5.414a1 1 0 01.293.707V19a2 2 0 01-2 2z"></path>
+                </svg>
+                <span>Official Curriculum Vitae • Updated 2026</span>
+              </div>
+
+              <h2 class="text-2xl sm:text-3xl md:text-4xl font-extrabold tracking-tight text-white leading-tight font-display">
+                Download Official CV Document
+              </h2>
+
+              <p class="text-sm sm:text-base text-sand-300 leading-relaxed max-w-xl">
+                Get full comprehensive insight into Fernando Ilham Pate Gheta's academic background in Finance Management, government internship track record at KKP RI, marketplace achievements, and professional competencies.
+              </p>
+
+              <!-- Highlights Grid -->
+              <div class="grid grid-cols-1 sm:grid-cols-2 gap-2.5 pt-2 text-xs sm:text-sm text-sand-300">
+                <div class="flex items-center gap-2">
+                  <svg class="w-4 h-4 text-sage-400 shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2.5" d="M5 13l4 4L19 7"></path></svg>
+                  <span>Complete Career Experience</span>
+                </div>
+                <div class="flex items-center gap-2">
+                  <svg class="w-4 h-4 text-sage-400 shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2.5" d="M5 13l4 4L19 7"></path></svg>
+                  <span>Formal Education &amp; BNSP Certification</span>
+                </div>
+                <div class="flex items-center gap-2">
+                  <svg class="w-4 h-4 text-sage-400 shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2.5" d="M5 13l4 4L19 7"></path></svg>
+                  <span>Direct Contact &amp; Portfolio Links</span>
+                </div>
+                <div class="flex items-center gap-2">
+                  <svg class="w-4 h-4 text-sage-400 shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2.5" d="M5 13l4 4L19 7"></path></svg>
+                  <span>Standard Printer-Friendly PDF Format</span>
+                </div>
+              </div>
+            </div>
+
+            <!-- Right Call to Action Buttons -->
+            <div class="md:col-span-4 flex flex-col items-center md:items-end justify-center gap-3.5 pt-4 md:pt-0">
+              
+              <!-- Prominent Download Button -->
+              <a id="cta-cv-download" href="CV-Fernando Ilham Pate Gheta 2026.pdf" download="CV-Fernando Ilham Pate Gheta 2026.pdf" onclick="notifyDownload(this.getAttribute('download'))" class="w-full sm:w-auto inline-flex items-center justify-center gap-3 px-8 py-4 rounded-2xl bg-sage-500 hover:bg-sage-400 text-white font-bold text-sm sm:text-base shadow-xl hover:shadow-glow-sage transition-all transform hover:-translate-y-1">
+                <svg class="w-5 h-5 animate-bounce" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                  <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2.5" d="M4 16v1a3 3 0 003 3h10a3 3 0 003-3v-1m-4-4l-4 4m0 0l-4-4m4 4V4"></path>
+                </svg>
+                <span>Download CV (.PDF)</span>
+              </a>
+
+              <!-- Secondary Preview / Open Button -->
+              <a id="cta-cv-preview" href="CV-Fernando Ilham Pate Gheta 2026.pdf" target="_blank" rel="noopener noreferrer" class="w-full sm:w-auto inline-flex items-center justify-center gap-2 px-6 py-2.5 rounded-xl bg-white/10 hover:bg-white/20 border border-white/20 text-sand-200 hover:text-white font-semibold text-xs tracking-wide transition-all">
+                <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                  <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 12a3 3 0 11-6 0 3 3 0 016 0z"></path>
+                  <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M2.458 12C3.732 7.943 7.523 5 12 5c4.478 0 8.268 2.943 9.542 7-1.274 4.057-5.064 7-9.542 7-4.477 0-8.268-2.943-9.542-7z"></path>
+                </svg>
+                <span>Open / Preview in Tab</span>
+              </a>
+
+              <p id="cv-filename-label" class="text-[11px] text-sand-400 text-center md:text-right">
+                Default: CV-Fernando Ilham Pate Gheta 2026.pdf
+              </p>
+            </div>
+
+          </div>
+
+        </div>
+      </div>
+    </section>
+
+  </main>
+
+  <!-- ======================================================== -->
+  <!-- 9. INTERACTIVE LIVE UPLOAD PANEL / ASSET MANAGER (DRAWER) -->
+  <!-- Client-side Vanilla JS using URL.createObjectURL           -->
+  <!-- ======================================================== -->
+  
+  <!-- Backdrop Overlay -->
+  <div id="asset-drawer-backdrop" class="fixed inset-0 z-50 bg-slateGreen-950/60 backdrop-blur-sm hidden transition-opacity duration-300 opacity-0" onclick="toggleAssetDrawer(false)"></div>
+
+  <!-- Slide-Over Drawer Container -->
+  <aside id="asset-drawer" class="fixed top-0 right-0 z-50 h-full w-full sm:w-[480px] md:w-[540px] bg-sand-100 dark:bg-slateGreen-950 border-l border-sand-300 dark:border-slateGreen-800 shadow-2xl transform translate-x-full transition-transform duration-300 ease-in-out flex flex-col">
+    
+    <!-- Drawer Header -->
+    <div class="p-6 border-b border-sand-300 dark:border-slateGreen-800 bg-sand-200/50 dark:bg-slateGreen-900/60 flex items-start justify-between gap-4">
+      <div>
+        <div class="inline-flex items-center gap-1.5 px-2.5 py-0.5 rounded-full text-[10px] font-bold uppercase tracking-wider bg-sage-100 text-sage-800 dark:bg-slateGreen-800 dark:text-sage-200 mb-1.5">
+          <span class="w-1.5 h-1.5 rounded-full bg-sage-500 animate-ping"></span>
+          <span>Client-Side Real-Time Studio</span>
+        </div>
+        <h3 class="text-xl font-extrabold text-slateGreen-900 dark:text-sand-100 font-display">
+          Asset Manager / Live Upload Panel
+        </h3>
+        <p class="text-xs text-slateGreen-600 dark:text-sand-400 mt-1 leading-relaxed">
+          Select local photos and files to instantly update image sources and downloadable documents in real time using Vanilla JS <code class="px-1 py-0.5 rounded bg-sand-300 dark:bg-slateGreen-800 font-mono text-[11px]">URL.createObjectURL</code>.
+        </p>
+      </div>
+
+      <!-- Close Drawer Button -->
+      <button onclick="toggleAssetDrawer(false)" aria-label="Close Asset Studio" class="p-2 rounded-xl text-slateGreen-600 dark:text-sand-400 hover:bg-sand-300 dark:hover:bg-slateGreen-800 hover:text-slateGreen-900 dark:hover:text-sand-100 transition-colors">
+        <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+          <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M6 18L18 6M6 6l12 12"></path>
+        </svg>
+      </button>
+    </div>
+
+    <!-- Drawer Body: Scrollable Asset Items -->
+    <div class="flex-1 overflow-y-auto p-6 space-y-6">
+      
+      <!-- Group 1: Profile & Bio Imagery -->
+      <div>
+        <h4 class="text-xs font-bold uppercase tracking-wider text-sage-700 dark:text-sage-400 mb-3 flex items-center gap-2">
+          <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 16l4.586-4.586a2 2 0 012.828 0L16 16m-2-2l1.586-1.586a2 2 0 012.828 0L20 14m-6-6h.01M6 20h12a2 2 0 002-2V6a2 2 0 00-2-2H6a2 2 0 00-2 2v12a2 2 0 002 2z"></path></svg>
+          <span>Hero &amp; Profile Images</span>
+        </h4>
+
+        <div class="space-y-3">
+          
+          <!-- Asset 1: Header Profile Photo (FOTO-NANDO.jpg) -->
+          <div class="p-4 rounded-2xl bg-white dark:bg-slateGreen-900 border border-sand-300 dark:border-slateGreen-800 flex items-center justify-between gap-3 shadow-sm hover:border-sage-400 transition-colors">
+            <div class="flex items-center gap-3 min-w-0">
+              <div class="w-12 h-12 rounded-xl overflow-hidden bg-sand-200 dark:bg-slateGreen-800 shrink-0 border border-sand-300 dark:border-slateGreen-700">
+                <img id="preview-thumb-hero" src="FOTO-NANDO.jpg" alt="Hero Thumb" class="w-full h-full object-cover">
+              </div>
+              <div class="min-w-0">
+                <p class="text-xs font-bold text-slateGreen-900 dark:text-sand-100 truncate">1. Header Image (Top Right)</p>
+                <p id="label-status-hero" class="text-[11px] text-sage-600 dark:text-sage-400 truncate">Default: FOTO-NANDO.jpg</p>
+              </div>
+            </div>
+
+            <div class="flex items-center gap-1.5 shrink-0">
+              <input type="file" id="file-hero-img" accept="image/*" class="hidden" onchange="handleAssetUpload('hero', this.files[0])">
+              <button onclick="document.getElementById('file-hero-img').click()" class="px-2.5 py-1.5 text-xs font-semibold rounded-lg bg-sage-100 dark:bg-slateGreen-800 hover:bg-sage-200 dark:hover:bg-slateGreen-700 text-slateGreen-900 dark:text-sand-200 transition-colors">
+                Replace
+              </button>
+              <button id="reset-btn-hero" onclick="resetAsset('hero')" title="Reset to default" class="hidden p-1.5 rounded-lg text-terracotta-600 hover:bg-terracotta-50 dark:hover:bg-slateGreen-800 transition-colors">
+                <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 4v5h.582m15.356 2A8.001 8.001 0 004.582 9m0 0H9m11 11v-5h-.581m0 0a8.003 8.003 0 01-15.357-2m15.357 2H15"></path></svg>
+              </button>
+            </div>
+          </div>
+
+          <!-- Asset 2: Professional Summary Image (hijau-nando.jpg) -->
+          <div class="p-4 rounded-2xl bg-white dark:bg-slateGreen-900 border border-sand-300 dark:border-slateGreen-800 flex items-center justify-between gap-3 shadow-sm hover:border-sage-400 transition-colors">
+            <div class="flex items-center gap-3 min-w-0">
+              <div class="w-12 h-12 rounded-xl overflow-hidden bg-sand-200 dark:bg-slateGreen-800 shrink-0 border border-sand-300 dark:border-slateGreen-700">
+                <img id="preview-thumb-summary" src="hijau-nando.jpg" alt="Summary Thumb" class="w-full h-full object-cover">
+              </div>
+              <div class="min-w-0">
+                <p class="text-xs font-bold text-slateGreen-900 dark:text-sand-100 truncate">2. Professional Summary Accent Image</p>
+                <p id="label-status-summary" class="text-[11px] text-sage-600 dark:text-sage-400 truncate">Default: hijau-nando.jpg</p>
+              </div>
+            </div>
+
+            <div class="flex items-center gap-1.5 shrink-0">
+              <input type="file" id="file-summary-img" accept="image/*" class="hidden" onchange="handleAssetUpload('summary', this.files[0])">
+              <button onclick="document.getElementById('file-summary-img').click()" class="px-2.5 py-1.5 text-xs font-semibold rounded-lg bg-sage-100 dark:bg-slateGreen-800 hover:bg-sage-200 dark:hover:bg-slateGreen-700 text-slateGreen-900 dark:text-sand-200 transition-colors">
+                Replace
+              </button>
+              <button id="reset-btn-summary" onclick="resetAsset('summary')" title="Reset to default" class="hidden p-1.5 rounded-lg text-terracotta-600 hover:bg-terracotta-50 dark:hover:bg-slateGreen-800 transition-colors">
+                <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 4v5h.582m15.356 2A8.001 8.001 0 004.582 9m0 0H9m11 11v-5h-.581m0 0a8.003 8.003 0 01-15.357-2m15.357 2H15"></path></svg>
+              </button>
+            </div>
+          </div>
+
+        </div>
+      </div>
+
+      <!-- Group 2: Gallery Images -->
+      <div>
+        <h4 class="text-xs font-bold uppercase tracking-wider text-sage-700 dark:text-sage-400 mb-3 flex items-center gap-2">
+          <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 11H5m14 0a2 2 0 012 2v6a2 2 0 01-2 2H5a2 2 0 01-2-2v-6a2 2 0 012-2m14 0V9a2 2 0 00-2-2M5 11V9a2 2 0 012-2m0 0V5a2 2 0 012-2h6a2 2 0 012 2v2M7 7h10"></path></svg>
+          <span>Work Experience Gallery Images</span>
+        </h4>
+
+        <div class="space-y-3">
+          
+          <!-- Asset 3: Gallery 1 (kkp-n.jpg) -->
+          <div class="p-4 rounded-2xl bg-white dark:bg-slateGreen-900 border border-sand-300 dark:border-slateGreen-800 flex items-center justify-between gap-3 shadow-sm hover:border-sage-400 transition-colors">
+            <div class="flex items-center gap-3 min-w-0">
+              <div class="w-12 h-12 rounded-xl overflow-hidden bg-sand-200 dark:bg-slateGreen-800 shrink-0 border border-sand-300 dark:border-slateGreen-700">
+                <img id="preview-thumb-gallery1" src="kkp-n.jpg" alt="Gallery 1" class="w-full h-full object-cover">
+              </div>
+              <div class="min-w-0">
+                <p class="text-xs font-bold text-slateGreen-900 dark:text-sand-100 truncate">Gallery 1: Ministry Internship</p>
+                <p id="label-status-gallery1" class="text-[11px] text-sage-600 dark:text-sage-400 truncate">Default: kkp-n.jpg</p>
+              </div>
+            </div>
+
+            <div class="flex items-center gap-1.5 shrink-0">
+              <input type="file" id="file-gallery1-img" accept="image/*" class="hidden" onchange="handleAssetUpload('gallery1', this.files[0])">
+              <button onclick="document.getElementById('file-gallery1-img').click()" class="px-2.5 py-1.5 text-xs font-semibold rounded-lg bg-sage-100 dark:bg-slateGreen-800 hover:bg-sage-200 dark:hover:bg-slateGreen-700 text-slateGreen-900 dark:text-sand-200 transition-colors">
+                Replace
+              </button>
+              <button id="reset-btn-gallery1" onclick="resetAsset('gallery1')" title="Reset to default" class="hidden p-1.5 rounded-lg text-terracotta-600 hover:bg-terracotta-50 dark:hover:bg-slateGreen-800 transition-colors">
+                <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 4v5h.582m15.356 2A8.001 8.001 0 004.582 9m0 0H9m11 11v-5h-.581m0 0a8.003 8.003 0 01-15.357-2m15.357 2H15"></path></svg>
+              </button>
+            </div>
+          </div>
+
+          <!-- Asset 4: Gallery 2 (tt-n.jpg) -->
+          <div class="p-4 rounded-2xl bg-white dark:bg-slateGreen-900 border border-sand-300 dark:border-slateGreen-800 flex items-center justify-between gap-3 shadow-sm hover:border-sage-400 transition-colors">
+            <div class="flex items-center gap-3 min-w-0">
+              <div class="w-12 h-12 rounded-xl overflow-hidden bg-sand-200 dark:bg-slateGreen-800 shrink-0 border border-sand-300 dark:border-slateGreen-700">
+                <img id="preview-thumb-gallery2" src="tt-n.jpg" alt="Gallery 2" class="w-full h-full object-cover">
+              </div>
+              <div class="min-w-0">
+                <p class="text-xs font-bold text-slateGreen-900 dark:text-sand-100 truncate">Gallery 2: E-Commerce &amp; Live Commerce</p>
+                <p id="label-status-gallery2" class="text-[11px] text-sage-600 dark:text-sage-400 truncate">Default: tt-n.jpg</p>
+              </div>
+            </div>
+
+            <div class="flex items-center gap-1.5 shrink-0">
+              <input type="file" id="file-gallery2-img" accept="image/*" class="hidden" onchange="handleAssetUpload('gallery2', this.files[0])">
+              <button onclick="document.getElementById('file-gallery2-img').click()" class="px-2.5 py-1.5 text-xs font-semibold rounded-lg bg-sage-100 dark:bg-slateGreen-800 hover:bg-sage-200 dark:hover:bg-slateGreen-700 text-slateGreen-900 dark:text-sand-200 transition-colors">
+                Replace
+              </button>
+              <button id="reset-btn-gallery2" onclick="resetAsset('gallery2')" title="Reset to default" class="hidden p-1.5 rounded-lg text-terracotta-600 hover:bg-terracotta-50 dark:hover:bg-slateGreen-800 transition-colors">
+                <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 4v5h.582m15.356 2A8.001 8.001 0 004.582 9m0 0H9m11 11v-5h-.581m0 0a8.003 8.003 0 01-15.357-2m15.357 2H15"></path></svg>
+              </button>
+            </div>
+          </div>
+
+          <!-- Asset 5: Gallery 3 (lk-n.jpg) -->
+          <div class="p-4 rounded-2xl bg-white dark:bg-slateGreen-900 border border-sand-300 dark:border-slateGreen-800 flex items-center justify-between gap-3 shadow-sm hover:border-sage-400 transition-colors">
+            <div class="flex items-center gap-3 min-w-0">
+              <div class="w-12 h-12 rounded-xl overflow-hidden bg-sand-200 dark:bg-slateGreen-800 shrink-0 border border-sand-300 dark:border-slateGreen-700">
+                <img id="preview-thumb-gallery3" src="lk-n.jpg" alt="Gallery 3" class="w-full h-full object-cover">
+              </div>
+              <div class="min-w-0">
+                <p class="text-xs font-bold text-slateGreen-900 dark:text-sand-100 truncate">Gallery 3: Business &amp; Analytics</p>
+                <p id="label-status-gallery3" class="text-[11px] text-sage-600 dark:text-sage-400 truncate">Default: lk-n.jpg</p>
+              </div>
+            </div>
+
+            <div class="flex items-center gap-1.5 shrink-0">
+              <input type="file" id="file-gallery3-img" accept="image/*" class="hidden" onchange="handleAssetUpload('gallery3', this.files[0])">
+              <button onclick="document.getElementById('file-gallery3-img').click()" class="px-2.5 py-1.5 text-xs font-semibold rounded-lg bg-sage-100 dark:bg-slateGreen-800 hover:bg-sage-200 dark:hover:bg-slateGreen-700 text-slateGreen-900 dark:text-sand-200 transition-colors">
+                Replace
+              </button>
+              <button id="reset-btn-gallery3" onclick="resetAsset('gallery3')" title="Reset to default" class="hidden p-1.5 rounded-lg text-terracotta-600 hover:bg-terracotta-50 dark:hover:bg-slateGreen-800 transition-colors">
+                <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 4v5h.582m15.356 2A8.001 8.001 0 004.582 9m0 0H9m11 11v-5h-.581m0 0a8.003 8.003 0 01-15.357-2m15.357 2H15"></path></svg>
+              </button>
+            </div>
+          </div>
+
+        </div>
+      </div>
+
+      <!-- Group 3: Downloadable Project Spreadsheets & CV -->
+      <div>
+        <h4 class="text-xs font-bold uppercase tracking-wider text-sage-700 dark:text-sage-400 mb-3 flex items-center gap-2">
+          <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 10v6m0 0l-3-3m3 3l3-3m2 8H7a2 2 0 01-2-2V5a2 2 0 012-2h5.586a1 1 0 01.707.293l5.414 5.414a1 1 0 01.293.707V19a2 2 0 01-2 2z"></path></svg>
+          <span>Downloadable Project Files &amp; Official CV</span>
+        </h4>
+
+        <div class="space-y-3">
+          
+          <!-- Asset 6: Project 1 (Project 1.xlsx) -->
+          <div class="p-4 rounded-2xl bg-white dark:bg-slateGreen-900 border border-sand-300 dark:border-slateGreen-800 flex items-center justify-between gap-3 shadow-sm hover:border-sage-400 transition-colors">
+            <div class="flex items-center gap-3 min-w-0">
+              <div class="w-12 h-12 rounded-xl bg-sage-100 dark:bg-slateGreen-800 text-sage-700 dark:text-sage-300 flex items-center justify-center shrink-0 border border-sand-300 dark:border-slateGreen-700 font-bold text-xs">
+                XLSX
+              </div>
+              <div class="min-w-0">
+                <p class="text-xs font-bold text-slateGreen-900 dark:text-sand-100 truncate">Project 1: Ex. Project Formula</p>
+                <p id="label-status-project1" class="text-[11px] text-sage-600 dark:text-sage-400 truncate">Default: Project 1.xlsx</p>
+              </div>
+            </div>
+
+            <div class="flex items-center gap-1.5 shrink-0">
+              <input type="file" id="file-project1-doc" accept=".xlsx,.xls,.csv" class="hidden" onchange="handleAssetUpload('project1', this.files[0])">
+              <button onclick="document.getElementById('file-project1-doc').click()" class="px-2.5 py-1.5 text-xs font-semibold rounded-lg bg-sage-100 dark:bg-slateGreen-800 hover:bg-sage-200 dark:hover:bg-slateGreen-700 text-slateGreen-900 dark:text-sand-200 transition-colors">
+                Replace
+              </button>
+              <button id="reset-btn-project1" onclick="resetAsset('project1')" title="Reset to default" class="hidden p-1.5 rounded-lg text-terracotta-600 hover:bg-terracotta-50 dark:hover:bg-slateGreen-800 transition-colors">
+                <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 4v5h.582m15.356 2A8.001 8.001 0 004.582 9m0 0H9m11 11v-5h-.581m0 0a8.003 8.003 0 01-15.357-2m15.357 2H15"></path></svg>
+              </button>
+            </div>
+          </div>
+
+          <!-- Asset 7: Project 2 (Dashboard Project.xlsx) -->
+          <div class="p-4 rounded-2xl bg-white dark:bg-slateGreen-900 border border-sand-300 dark:border-slateGreen-800 flex items-center justify-between gap-3 shadow-sm hover:border-sage-400 transition-colors">
+            <div class="flex items-center gap-3 min-w-0">
+              <div class="w-12 h-12 rounded-xl bg-terracotta-100 dark:bg-slateGreen-800 text-terracotta-700 dark:text-terracotta-300 flex items-center justify-center shrink-0 border border-sand-300 dark:border-slateGreen-700 font-bold text-xs">
+                XLSX
+              </div>
+              <div class="min-w-0">
+                <p class="text-xs font-bold text-slateGreen-900 dark:text-sand-100 truncate">Project 2: Dashboard Analyst</p>
+                <p id="label-status-project2" class="text-[11px] text-sage-600 dark:text-sage-400 truncate">Default: Dashboard Project.xlsx</p>
+              </div>
+            </div>
+
+            <div class="flex items-center gap-1.5 shrink-0">
+              <input type="file" id="file-project2-doc" accept=".xlsx,.xls,.csv" class="hidden" onchange="handleAssetUpload('project2', this.files[0])">
+              <button onclick="document.getElementById('file-project2-doc').click()" class="px-2.5 py-1.5 text-xs font-semibold rounded-lg bg-sage-100 dark:bg-slateGreen-800 hover:bg-sage-200 dark:hover:bg-slateGreen-700 text-slateGreen-900 dark:text-sand-200 transition-colors">
+                Replace
+              </button>
+              <button id="reset-btn-project2" onclick="resetAsset('project2')" title="Reset to default" class="hidden p-1.5 rounded-lg text-terracotta-600 hover:bg-terracotta-50 dark:hover:bg-slateGreen-800 transition-colors">
+                <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 4v5h.582m15.356 2A8.001 8.001 0 004.582 9m0 0H9m11 11v-5h-.581m0 0a8.003 8.003 0 01-15.357-2m15.357 2H15"></path></svg>
+              </button>
+            </div>
+          </div>
+
+          <!-- Asset 8: Official CV Document (CV-Fernando Ilham Pate Gheta 2026.pdf) -->
+          <div class="p-4 rounded-2xl bg-white dark:bg-slateGreen-900 border border-sand-300 dark:border-slateGreen-800 flex items-center justify-between gap-3 shadow-sm hover:border-sage-400 transition-colors">
+            <div class="flex items-center gap-3 min-w-0">
+              <div class="w-12 h-12 rounded-xl bg-slateGreen-800 text-white flex items-center justify-center shrink-0 border border-sand-300 dark:border-slateGreen-700 font-bold text-xs">
+                PDF
+              </div>
+              <div class="min-w-0">
+                <p class="text-xs font-bold text-slateGreen-900 dark:text-sand-100 truncate">Official Curriculum Vitae</p>
+                <p id="label-status-cv" class="text-[11px] text-sage-600 dark:text-sage-400 truncate">Default: CV-Fernando...2026.pdf</p>
+              </div>
+            </div>
+
+            <div class="flex items-center gap-1.5 shrink-0">
+              <input type="file" id="file-cv-doc" accept=".pdf" class="hidden" onchange="handleAssetUpload('cv', this.files[0])">
+              <button onclick="document.getElementById('file-cv-doc').click()" class="px-2.5 py-1.5 text-xs font-semibold rounded-lg bg-sage-100 dark:bg-slateGreen-800 hover:bg-sage-200 dark:hover:bg-slateGreen-700 text-slateGreen-900 dark:text-sand-200 transition-colors">
+                Replace
+              </button>
+              <button id="reset-btn-cv" onclick="resetAsset('cv')" title="Reset to default" class="hidden p-1.5 rounded-lg text-terracotta-600 hover:bg-terracotta-50 dark:hover:bg-slateGreen-800 transition-colors">
+                <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 4v5h.582m15.356 2A8.001 8.001 0 004.582 9m0 0H9m11 11v-5h-.581m0 0a8.003 8.003 0 01-15.357-2m15.357 2H15"></path></svg>
+              </button>
+            </div>
+          </div>
+
+        </div>
+      </div>
+
+    </div>
+
+    <!-- Drawer Footer Actions -->
+    <div class="p-6 border-t border-sand-300 dark:border-slateGreen-800 bg-sand-200/50 dark:bg-slateGreen-900/60 flex items-center justify-between gap-3">
+      <button onclick="resetAllAssets()" class="text-xs font-bold text-terracotta-600 dark:text-terracotta-400 hover:underline">
+        Reset All to Defaults
+      </button>
+
+      <button onclick="toggleAssetDrawer(false)" class="px-5 py-2.5 rounded-xl bg-slateGreen-800 hover:bg-slateGreen-700 dark:bg-sage-600 dark:hover:bg-sage-500 text-white font-bold text-xs uppercase tracking-wider transition-all">
+        Done / Close
+      </button>
+    </div>
+
+  </aside>
+
+  <!-- ======================================================== -->
+  <!-- FLOATING ASSET STUDIO TOGGLE PILL (BOTTOM-RIGHT)         -->
+  <!-- ======================================================== -->
+  <button id="floating-asset-btn" onclick="toggleAssetDrawer(true)" class="fixed bottom-6 left-6 z-40 inline-flex items-center gap-2.5 px-4 py-3 rounded-2xl bg-white/95 dark:bg-slateGreen-900 border border-sand-300 dark:border-slateGreen-700 shadow-xl text-slateGreen-900 dark:text-sand-100 text-xs font-bold hover:shadow-2xl hover:border-sage-500 transition-all transform hover:-translate-y-1 backdrop-blur-md">
+    <span class="w-2.5 h-2.5 rounded-full bg-sage-500 animate-ping"></span>
+    <svg class="w-4 h-4 text-sage-600 dark:text-sage-400" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+      <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M11 5H6a2 2 0 00-2 2v11a2 2 0 002 2h11a2 2 0 002-2v-5m-1.414-9.414a2 2 0 112.828 2.828L11.828 15H9v-2.828l8.586-8.586z"></path>
+    </svg>
+    <span>Live Asset Studio</span>
+  </button>
+
+  <!-- ======================================================== -->
+  <!-- LIGHTBOX MODAL FOR GALLERY PREVIEW                       -->
+  <!-- ======================================================== -->
+  <div id="lightbox-modal" class="fixed inset-0 z-50 hidden items-center justify-center bg-slateGreen-950/90 backdrop-blur-md p-4 transition-opacity duration-300" onclick="closeLightbox(event)">
+    <div class="relative max-w-4xl w-full max-h-[90vh] flex flex-col items-center bg-sand-100 dark:bg-slateGreen-900 rounded-3xl border border-sand-300 dark:border-slateGreen-800 overflow-hidden shadow-2xl" onclick="event.stopPropagation()">
+      
+      <!-- Close Button -->
+      <button onclick="closeLightbox()" aria-label="Close Lightbox" class="absolute top-4 right-4 z-10 w-10 h-10 rounded-full bg-slateGreen-950/70 text-white hover:bg-sage-600 transition-colors flex items-center justify-center">
+        <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+          <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M6 18L18 6M6 6l12 12"></path>
+        </svg>
+      </button>
+
+      <!-- Lightbox Image Viewport -->
+      <div class="w-full flex-1 max-h-[72vh] overflow-hidden bg-black/40 flex items-center justify-center">
+        <img id="lightbox-img" src="" alt="Portfolio Preview" class="max-w-full max-h-[72vh] object-contain">
+      </div>
+
+      <!-- Lightbox Caption & Details -->
+      <div class="w-full p-6 bg-white dark:bg-slateGreen-900 text-left border-t border-sand-300 dark:border-slateGreen-800">
+        <h4 id="lightbox-title" class="text-lg font-bold text-slateGreen-900 dark:text-sand-100 font-display">Image Title</h4>
+        <p id="lightbox-caption" class="text-xs sm:text-sm text-slateGreen-600 dark:text-sand-400 mt-1">Image Description</p>
+      </div>
+    </div>
+  </div>
+
+  <!-- ======================================================== -->
+  <!-- FOOTER                                                   -->
+  <!-- ======================================================== -->
+  <footer class="bg-white dark:bg-slateGreen-950 border-t border-sand-300 dark:border-slateGreen-800/80 py-12 transition-colors">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      <div class="flex flex-col md:flex-row items-center justify-between gap-6">
+        
+        <!-- Identity & Copyright -->
+        <div class="text-center md:text-left">
+          <div class="flex items-center justify-center md:justify-start gap-3">
+            <div class="w-8 h-8 rounded-full overflow-hidden border border-sage-500">
+              <img id="footer-avatar-img" src="FOTO-NANDO.jpg" alt="Fernando" class="w-full h-full object-cover">
+            </div>
+            <p class="text-base font-bold text-slateGreen-900 dark:text-sand-100 font-display">
+              FERNANDO ILHAM PATE GHETA
+            </p>
+          </div>
+          <p class="text-xs text-slateGreen-600 dark:text-sand-400 mt-1.5">
+            Management Graduate (Finance Concentration) &amp; E-Commerce Operations Specialist • Tangerang, Indonesia
+          </p>
+        </div>
+
+        <!-- Social & Quick Navigation Links -->
+        <div class="flex flex-wrap items-center justify-center gap-6 text-xs sm:text-sm text-slateGreen-700 dark:text-sand-300 font-medium">
+          <a href="https://www.linkedin.com/in/fernando-ilham-1991251b4" target="_blank" rel="noopener noreferrer" class="hover:text-sage-600 dark:hover:text-sage-300 transition-colors flex items-center gap-1.5">
+            <svg class="w-4 h-4 text-[#0077b5]" fill="currentColor" viewBox="0 0 24 24"><path d="M19 0h-14c-2.761 0-5 2.239-5 5v14c0 2.761 2.239 5 5 5h14c2.762 0 5-2.239 5-5v-14c0-2.761-2.238-5-5-5zm-11 19h-3v-11h3v11zm-1.5-12.268c-.966 0-1.75-.79-1.75-1.764s.784-1.764 1.75-1.764 1.75.79 1.75 1.764-.783 1.764-1.75 1.764zm13.5 12.268h-3v-5.604c0-3.368-4-3.113-4 0v5.604h-3v-11h3v1.765c1.396-2.586 7-2.777 7 2.476v6.759z"/></svg>
+            <span>LinkedIn</span>
+          </a>
+          <a href="mailto:fernandoilham04@gmail.com" class="hover:text-sage-600 dark:hover:text-sage-300 transition-colors">
+            fernandoilham04@gmail.com
+          </a>
+          <a href="#hero" class="hover:text-sage-600 dark:hover:text-sage-300 transition-colors flex items-center gap-1">
+            <span>Back to top</span>
+            <svg class="w-3.5 h-3.5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 10l7-7m0 0l7 7m-7-7v18"></path></svg>
+          </a>
+        </div>
+
+      </div>
+
+      <div class="mt-8 pt-6 border-t border-sand-300 dark:border-slateGreen-800 text-center text-xs text-slateGreen-500 dark:text-sand-400">
+        &copy; 2026 Fernando Ilham Pate Gheta. Built with HTML5, Tailwind CSS, &amp; Vanilla JavaScript. All rights reserved.
+      </div>
+    </div>
+  </footer>
+
+  <!-- ======================================================== -->
+  <!-- VANILLA JAVASCRIPT: LOGIC & CLIENT-SIDE ASSET STUDIO     -->
+  <!-- ======================================================== -->
+  <script>
+    // --- 1. Theme (Dark / Light Mode) Management ---
+    const themeToggleBtn = document.getElementById('theme-toggle');
+    const lightIcon = document.getElementById('theme-toggle-light-icon');
+    const darkIcon = document.getElementById('theme-toggle-dark-icon');
+
+    function applyTheme(isDark) {
+      if (isDark) {
+        document.documentElement.classList.add('dark');
+        lightIcon.classList.remove('hidden');
+        darkIcon.classList.add('hidden');
+        localStorage.setItem('calm_portfolio_theme', 'dark');
+      } else {
+        document.documentElement.classList.remove('dark');
+        lightIcon.classList.add('hidden');
+        darkIcon.classList.remove('hidden');
+        localStorage.setItem('calm_portfolio_theme', 'light');
+      }
+    }
+
+    const savedTheme = localStorage.getItem('calm_portfolio_theme');
+    const systemPrefersDark = window.matchMedia('(prefers-color-scheme: dark)').matches;
+    if (savedTheme === 'dark' || (!savedTheme && systemPrefersDark)) {
+      applyTheme(true);
+    } else {
+      applyTheme(false);
+    }
+
+    themeToggleBtn.addEventListener('click', () => {
+      const isCurrentlyDark = document.documentElement.classList.contains('dark');
+      applyTheme(!isCurrentlyDark);
+    });
+
+    // --- 2. Mobile Menu Toggle ---
+    const mobileMenuBtn = document.getElementById('mobile-menu-btn');
+    const mobileMenu = document.getElementById('mobile-menu');
+    mobileMenuBtn.addEventListener('click', () => {
+      mobileMenu.classList.toggle('hidden');
+    });
+
+    document.querySelectorAll('.mobile-nav-link').forEach(link => {
+      link.addEventListener('click', () => {
+        mobileMenu.classList.add('hidden');
+      });
+    });
+
+    // --- 3. Smooth Scroll Entrance Observer ---
+    const scrollObserver = new IntersectionObserver((entries) => {
+      entries.forEach(entry => {
+        if (entry.isIntersecting) {
+          entry.target.classList.add('is-visible');
+        }
+      });
+    }, {
+      threshold: 0.1,
+      rootMargin: '0px 0px -40px 0px'
+    });
+
+    document.querySelectorAll('.reveal-on-scroll').forEach(el => {
+      scrollObserver.observe(el);
+    });
+
+    // --- 4. Lightbox Modal Logic ---
+    const lightboxModal = document.getElementById('lightbox-modal');
+    const lightboxImg = document.getElementById('lightbox-img');
+    const lightboxTitle = document.getElementById('lightbox-title');
+    const lightboxCaption = document.getElementById('lightbox-caption');
+
+    function openLightboxFromGallery(colIndex) {
+      const currentSrc = assetState['gallery' + colIndex].currentUrl || assetState['gallery' + colIndex].defaultSrc;
+      const titleEl = document.getElementById('gallery-title-' + colIndex);
+      const captionEl = document.getElementById('gallery-caption-' + colIndex);
+
+      lightboxImg.src = currentSrc;
+      lightboxTitle.textContent = titleEl ? titleEl.textContent.trim() : 'Gallery Preview';
+      lightboxCaption.textContent = captionEl ? captionEl.textContent.trim() : '';
+      
+      lightboxModal.classList.remove('hidden');
+      lightboxModal.classList.add('flex');
+      document.body.style.overflow = 'hidden';
+    }
+
+    function closeLightbox(e) {
+      lightboxModal.classList.add('hidden');
+      lightboxModal.classList.remove('flex');
+      document.body.style.overflow = 'auto';
+    }
+
+    document.addEventListener('keydown', (e) => {
+      if (e.key === 'Escape') {
+        if (!lightboxModal.classList.contains('hidden')) {
+          closeLightbox();
+        }
+        if (!assetDrawer.classList.contains('translate-x-full')) {
+          toggleAssetDrawer(false);
+        }
+      }
+    });
+
+    // --- 5. Toast Notification System ---
+    let toastTimeout;
+    function notifyToast(title, message, isSuccess = true) {
+      const toast = document.getElementById('toast');
+      const toastTitle = document.getElementById('toast-title');
+      const toastMsg = document.getElementById('toast-message');
+
+      toastTitle.textContent = title;
+      toastMsg.textContent = message;
+
+      toast.classList.remove('translate-y-28', 'opacity-0');
+      toast.classList.add('translate-y-0', 'opacity-100');
+
+      clearTimeout(toastTimeout);
+      toastTimeout = setTimeout(() => {
+        toast.classList.remove('translate-y-0', 'opacity-100');
+        toast.classList.add('translate-y-28', 'opacity-0');
+      }, 3800);
+    }
+
+    function notifyDownload(filename) {
+      notifyToast("Downloading File", `File "${filename}" download started. Check browser downloads.`);
+    }
+
+    // --- 6. CLIENT-SIDE ASSET STUDIO & LIVE UPLOAD MANAGER ---
+    // Using URL.createObjectURL to dynamically update image sources & downloadable links in real-time
+    const assetState = {
+      hero: {
+        name: 'Header Profile Photo',
+        defaultSrc: 'FOTO-NANDO.jpg',
+        currentUrl: null,
+        fileName: null,
+        fileSize: null
+      },
+      summary: {
+        name: 'Summary Accent Photo',
+        defaultSrc: 'hijau-nando.jpg',
+        currentUrl: null,
+        fileName: null,
+        fileSize: null
+      },
+      gallery1: {
+        name: 'Ministry Internship Photo',
+        defaultSrc: 'kkp-n.jpg',
+        currentUrl: null,
+        fileName: null,
+        fileSize: null
+      },
+      gallery2: {
+        name: 'E-Commerce & Live Photo',
+        defaultSrc: 'tt-n.jpg',
+        currentUrl: null,
+        fileName: null,
+        fileSize: null
+      },
+      gallery3: {
+        name: 'Business & Analytics Photo',
+        defaultSrc: 'lk-n.jpg',
+        currentUrl: null,
+        fileName: null,
+        fileSize: null
+      },
+      project1: {
+        name: 'Ex. Project Formula Spreadsheet',
+        defaultSrc: 'Project 1.xlsx',
+        currentUrl: null,
+        fileName: null,
+        fileSize: null
+      },
+      project2: {
+        name: 'Dashboard Analyst Spreadsheet',
+        defaultSrc: 'Dashboard Project.xlsx',
+        currentUrl: null,
+        fileName: null,
+        fileSize: null
+      },
+      cv: {
+        name: 'Official CV Document',
+        defaultSrc: 'CV-Fernando Ilham Pate Gheta 2026.pdf',
+        currentUrl: null,
+        fileName: null,
+        fileSize: null
+      }
+    };
+
+    const assetDrawer = document.getElementById('asset-drawer');
+    const assetDrawerBackdrop = document.getElementById('asset-drawer-backdrop');
+
+    function toggleAssetDrawer(open) {
+      if (open) {
+        assetDrawerBackdrop.classList.remove('hidden');
+        setTimeout(() => {
+          assetDrawerBackdrop.classList.remove('opacity-0');
+          assetDrawerBackdrop.classList.add('opacity-100');
+          assetDrawer.classList.remove('translate-x-full');
+        }, 10);
+        document.body.style.overflow = 'hidden';
+      } else {
+        assetDrawer.classList.add('translate-x-full');
+        assetDrawerBackdrop.classList.remove('opacity-100');
+        assetDrawerBackdrop.classList.add('opacity-0');
+        setTimeout(() => {
+          assetDrawerBackdrop.classList.add('hidden');
+          document.body.style.overflow = 'auto';
+        }, 300);
+      }
+    }
+
+    function formatFileSize(bytes) {
+      if (bytes === 0) return '0 Bytes';
+      const k = 1024;
+      const sizes = ['Bytes', 'KB', 'MB'];
+      const i = Math.floor(Math.log(bytes) / Math.log(k));
+      return parseFloat((bytes / Math.pow(k, i)).toFixed(1)) + ' ' + sizes[i];
+    }
+
+    function updateCustomBadgeCount() {
+      let count = 0;
+      Object.keys(assetState).forEach(key => {
+        if (assetState[key].currentUrl) count++;
+      });
+      const badge = document.getElementById('nav-custom-badge');
+      if (count > 0) {
+        badge.textContent = count;
+        badge.classList.remove('hidden');
+      } else {
+        badge.classList.add('hidden');
+      }
+    }
+
+    function handleAssetUpload(key, file) {
+      if (!file) return;
+
+      const item = assetState[key];
+      // Revoke prior Object URL to free memory
+      if (item.currentUrl) {
+        URL.revokeObjectURL(item.currentUrl);
+      }
+
+      // Generate local Object URL
+      const objectUrl = URL.createObjectURL(file);
+      item.currentUrl = objectUrl;
+      item.fileName = file.name;
+      item.fileSize = formatFileSize(file.size);
+
+      // Apply changes to DOM in real-time
+      applyAssetToDOM(key, objectUrl, file.name);
+
+      // Update drawer UI feedback
+      const label = document.getElementById('label-status-' + key);
+      const resetBtn = document.getElementById('reset-btn-' + key);
+      const thumb = document.getElementById('preview-thumb-' + key);
+
+      if (label) {
+        label.textContent = `Custom: ${file.name} (${item.fileSize})`;
+        label.classList.add('text-terracotta-600', 'font-semibold');
+      }
+      if (resetBtn) {
+        resetBtn.classList.remove('hidden');
+      }
+      if (thumb && file.type.startsWith('image/')) {
+        thumb.src = objectUrl;
+      }
+
+      updateCustomBadgeCount();
+      notifyToast("Asset Live Updated!", `Successfully replaced ${item.name} with "${file.name}"`);
+    }
+
+    function applyAssetToDOM(key, url, filename) {
+      switch(key) {
+        case 'hero':
+          document.getElementById('hero-profile-img').src = url;
+          document.getElementById('nav-avatar-img').src = url;
+          document.getElementById('footer-avatar-img').src = url;
+          break;
+        case 'summary':
+          document.getElementById('summary-accent-img').src = url;
+          break;
+        case 'gallery1':
+          document.getElementById('gallery-img-1').src = url;
+          break;
+        case 'gallery2':
+          document.getElementById('gallery-img-2').src = url;
+          break;
+        case 'gallery3':
+          document.getElementById('gallery-img-3').src = url;
+          break;
+        case 'project1':
+          const p1Btn = document.getElementById('project-1-btn');
+          const p1Label = document.getElementById('project-1-filename');
+          p1Btn.href = url;
+          p1Btn.setAttribute('download', filename);
+          p1Label.textContent = 'Custom File: ' + filename;
+          break;
+        case 'project2':
+          const p2Btn = document.getElementById('project-2-btn');
+          const p2Label = document.getElementById('project-2-filename');
+          p2Btn.href = url;
+          p2Btn.setAttribute('download', filename);
+          p2Label.textContent = 'Custom File: ' + filename;
+          break;
+        case 'cv':
+          const navCv = document.getElementById('nav-cv-download');
+          const heroCv = document.getElementById('hero-cv-download');
+          const ctaCv = document.getElementById('cta-cv-download');
+          const ctaPreview = document.getElementById('cta-cv-preview');
+          const cvLabel = document.getElementById('cv-filename-label');
+
+          [navCv, heroCv, ctaCv].forEach(btn => {
+            if (btn) {
+              btn.href = url;
+              btn.setAttribute('download', filename);
+            }
+          });
+          if (ctaPreview) ctaPreview.href = url;
+          if (cvLabel) cvLabel.textContent = 'Custom: ' + filename;
+          break;
+      }
+    }
+
+    function resetAsset(key) {
+      const item = assetState[key];
+      if (item.currentUrl) {
+        URL.revokeObjectURL(item.currentUrl);
+        item.currentUrl = null;
+        item.fileName = null;
+        item.fileSize = null;
+      }
+
+      // Revert to original default
+      applyAssetToDOM(key, item.defaultSrc, item.defaultSrc);
+
+      const label = document.getElementById('label-status-' + key);
+      const resetBtn = document.getElementById('reset-btn-' + key);
+      const thumb = document.getElementById('preview-thumb-' + key);
+
+      if (label) {
+        label.textContent = `Default: ${item.defaultSrc}`;
+        label.classList.remove('text-terracotta-600', 'font-semibold');
+      }
+      if (resetBtn) {
+        resetBtn.classList.add('hidden');
+      }
+      if (thumb) {
+        thumb.src = item.defaultSrc;
+      }
+
+      updateCustomBadgeCount();
+      notifyToast("Asset Reverted", `${item.name} has been restored to default.`);
+    }
+
+    function resetAllAssets() {
+      Object.keys(assetState).forEach(key => {
+        resetAsset(key);
+      });
+      notifyToast("All Defaults Restored", "All images and downloadable files reverted to initial project assets.");
+    }
+  </script>
+</body>
+</html>
