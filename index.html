@@ -1301,8 +1301,8 @@
           </p>
         </div>
 
-        <!-- Two Column Projects Grid -->
-        <div class="grid grid-cols-1 lg:grid-cols-2 gap-8">
+        <!-- Three Column Projects Grid -->
+        <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
 
           <!-- Card 1: Ex. Project Formula -> Project 1.xlsx -->
           <div class="reveal-on-scroll flex flex-col justify-between rounded-3xl bg-white/95 dark:bg-slateGreen-900/90 border border-sand-300 dark:border-slateGreen-800 p-7 sm:p-9 shadow-card-calm dark:shadow-card-calm-dark hover-tilt-bounce group">
@@ -1392,6 +1392,52 @@
                   <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 16v1a3 3 0 003 3h10a3 3 0 003-3v-1m-4-4l-4 4m0 0l-4-4m4 4V4"></path>
                 </svg>
                 <span>Download Dashboard</span>
+              </a>
+            </div>
+          </div>
+
+          <!-- Card 3: Forecast Report -> Forecast.pdf -->
+          <div class="reveal-on-scroll flex flex-col justify-between rounded-3xl bg-white/95 dark:bg-slateGreen-900/90 border border-sand-300 dark:border-slateGreen-800 p-7 sm:p-9 shadow-card-calm dark:shadow-card-calm-dark hover-tilt-bounce group" style="transition-delay: 200ms;">
+            <div>
+              <div class="flex items-center justify-between gap-4 mb-6">
+                <div class="w-12 h-12 rounded-2xl bg-sage-100 dark:bg-slateGreen-800 text-sage-700 dark:text-sage-300 flex items-center justify-center shrink-0 group-hover:scale-110 transition-transform">
+                  <!-- Analytics Forecast / PDF Document Icon -->
+                  <svg class="w-6 h-6" fill="currentColor" viewBox="0 0 24 24">
+                    <path d="M19 3H5c-1.1 0-2 .9-2 2v14c0 1.1.9 2 2 2h14c1.1 0 2-.9 2-2V5c0-1.1-.9-2-2-2zm-7 14H7v-2h5v2zm5-4H7v-2h10v2zm0-4H7V7h10v2z"/>
+                  </svg>
+                </div>
+                <span class="inline-flex items-center px-3 py-1 rounded-lg text-xs font-bold bg-sage-100 text-sage-800 dark:bg-slateGreen-800 dark:text-sage-300">
+                  PDF Document (.pdf)
+                </span>
+              </div>
+
+              <!-- Exact Title from prompt -->
+              <h3 class="text-xl sm:text-2xl font-bold text-slateGreen-900 dark:text-sand-100 group-hover:text-sage-700 dark:group-hover:text-sage-300 transition-colors mb-3 font-display">
+                Forecast Report
+              </h3>
+
+              <!-- Exact Description from prompt -->
+              <p class="text-sm sm:text-base text-slateGreen-600 dark:text-sand-300 leading-relaxed mb-6">
+                Comprehensive predictive forecasting document outlining financial projections and market trends.
+              </p>
+
+              <!-- Competencies / Tags -->
+              <div class="flex flex-wrap gap-2 mb-8">
+                <span class="text-xs px-3 py-1 rounded-xl bg-sand-200 dark:bg-slateGreen-800 text-slateGreen-800 dark:text-sand-300 font-medium">Predictive Forecasting</span>
+                <span class="text-xs px-3 py-1 rounded-xl bg-sand-200 dark:bg-slateGreen-800 text-slateGreen-800 dark:text-sand-300 font-medium">Financial Projections</span>
+                <span class="text-xs px-3 py-1 rounded-xl bg-sand-200 dark:bg-slateGreen-800 text-slateGreen-800 dark:text-sand-300 font-medium">Market Trends</span>
+                <span class="text-xs px-3 py-1 rounded-xl bg-sand-200 dark:bg-slateGreen-800 text-slateGreen-800 dark:text-sand-300 font-medium">Decision Analytics</span>
+              </div>
+            </div>
+
+            <!-- Download Button Linking to "Forecast.pdf" -->
+            <div class="pt-5 border-t border-sand-200 dark:border-slateGreen-800 flex flex-wrap items-center justify-between gap-3">
+              <span id="project-3-filename" class="text-xs text-slateGreen-500 dark:text-sand-400">File: Forecast.pdf</span>
+              <a id="project-3-btn" href="Forecast.pdf" download="Forecast.pdf" onclick="notifyDownload(this.getAttribute('download'))" class="inline-flex items-center gap-2 px-5 py-2.5 rounded-xl text-xs sm:text-sm font-bold uppercase tracking-wider text-white bg-slateGreen-800 hover:bg-slateGreen-700 dark:bg-sage-600 dark:hover:bg-sage-500 shadow-md hover:shadow-glow-sage transition-all transform hover:-translate-y-0.5">
+                <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                  <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 16v1a3 3 0 003 3h10a3 3 0 003-3v-1m-4-4l-4 4m0 0l-4-4m4 4V4"></path>
+                </svg>
+                <span>Download Report</span>
               </a>
             </div>
           </div>
@@ -1719,6 +1765,29 @@
             </div>
           </div>
 
+          <!-- Asset 8: Project 3 (Forecast.pdf) -->
+          <div class="p-4 rounded-2xl bg-white dark:bg-slateGreen-900 border border-sand-300 dark:border-slateGreen-800 flex items-center justify-between gap-3 shadow-sm hover:border-sage-400 transition-colors">
+            <div class="flex items-center gap-3 min-w-0">
+              <div class="w-12 h-12 rounded-xl bg-sage-100 dark:bg-slateGreen-800 text-sage-700 dark:text-sage-300 flex items-center justify-center shrink-0 border border-sand-300 dark:border-slateGreen-700 font-bold text-xs">
+                PDF
+              </div>
+              <div class="min-w-0">
+                <p class="text-xs font-bold text-slateGreen-900 dark:text-sand-100 truncate">Project 3: Forecast Report</p>
+                <p id="label-status-project3" class="text-[11px] text-sage-600 dark:text-sage-400 truncate">Default: Forecast.pdf</p>
+              </div>
+            </div>
+
+            <div class="flex items-center gap-1.5 shrink-0">
+              <input type="file" id="file-project3-doc" accept=".pdf" class="hidden" onchange="handleAssetUpload('project3', this.files[0])">
+              <button onclick="document.getElementById('file-project3-doc').click()" class="px-2.5 py-1.5 text-xs font-semibold rounded-lg bg-sage-100 dark:bg-slateGreen-800 hover:bg-sage-200 dark:hover:bg-slateGreen-700 text-slateGreen-900 dark:text-sand-200 transition-colors">
+                Replace
+              </button>
+              <button id="reset-btn-project3" onclick="resetAsset('project3')" title="Reset to default" class="hidden p-1.5 rounded-lg text-terracotta-600 hover:bg-terracotta-50 dark:hover:bg-slateGreen-800 transition-colors">
+                <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 4v5h.582m15.356 2A8.001 8.001 0 004.582 9m0 0H9m11 11v-5h-.581m0 0a8.003 8.003 0 01-15.357-2m15.357 2H15"></path></svg>
+              </button>
+            </div>
+          </div>
+
           <!-- Asset 8: Official CV Document (CV-Fernando Ilham Pate Gheta 2026.pdf) -->
           <div class="p-4 rounded-2xl bg-white dark:bg-slateGreen-900 border border-sand-300 dark:border-slateGreen-800 flex items-center justify-between gap-3 shadow-sm hover:border-sage-400 transition-colors">
             <div class="flex items-center gap-3 min-w-0">
@@ -2020,6 +2089,13 @@
         fileName: null,
         fileSize: null
       },
+      project3: {
+        name: 'Forecast Report Document',
+        defaultSrc: 'Forecast.pdf',
+        currentUrl: null,
+        fileName: null,
+        fileSize: null
+      },
       cv: {
         name: 'Official CV Document',
         defaultSrc: 'CV-Fernando Ilham Pate Gheta 2026.pdf',
@@ -2144,6 +2220,13 @@
           p2Btn.href = url;
           p2Btn.setAttribute('download', filename);
           p2Label.textContent = 'Custom File: ' + filename;
+          break;
+        case 'project3':
+          const p3Btn = document.getElementById('project-3-btn');
+          const p3Label = document.getElementById('project-3-filename');
+          p3Btn.href = url;
+          p3Btn.setAttribute('download', filename);
+          p3Label.textContent = 'Custom File: ' + filename;
           break;
         case 'cv':
           const navCv = document.getElementById('nav-cv-download');
